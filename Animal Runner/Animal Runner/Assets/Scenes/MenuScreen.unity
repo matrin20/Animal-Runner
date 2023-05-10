@@ -1123,6 +1123,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currency: 0
+  allAnimals:
+  - {fileID: 11400000, guid: 6c4ee61a67da0994083bc647d63bceb4, type: 2}
+  - {fileID: 11400000, guid: 7fee5410b5e3d8f44be5dfdd6fca03fc, type: 2}
+  - {fileID: 11400000, guid: d935ddac63b4a7a48854c774f023de06, type: 2}
+  - {fileID: 11400000, guid: 58c4540a93ff16640834852041a16109, type: 2}
+  headSlotItems:
+  - {fileID: 11400000, guid: 342ca7117664db84ead0b0ea87b11722, type: 2}
+  - {fileID: 11400000, guid: 8d88409857c64074dbb51da12e3edeff, type: 2}
+  - {fileID: 11400000, guid: d371d3f58fbdf0b448d699470027975a, type: 2}
 --- !u!4 &1997382402
 Transform:
   m_ObjectHideFlags: 0

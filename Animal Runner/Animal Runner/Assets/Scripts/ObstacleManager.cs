@@ -12,16 +12,29 @@ public class ObstacleManager : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> ObstaclePool;
+    [SerializeField]
+    private List<GameObject> ObstaclePool2;
+    [SerializeField]
+    private List<GameObject> ObstaclePool3;
+    private List<List<GameObject>> AllObstaclePools;
 
     private float speedIncreaseTimer;
     [SerializeField]
     private float speedIncrement;
     //this value would be driven by equipped items
     private float speedIncrementModifier;
+    private PlayerData _playerData;
+    private int biomeDepthIndex;
 
     // Start is called before the first frame update
     void Start()
     {
+        _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
+        biomeDepthIndex = _playerData.GetHeadSlotItem().itemID;
+        AllObstaclePools = new List<List<GameObject>>();
+        AllObstaclePools.Add(ObstaclePool);
+        AllObstaclePools.Add(ObstaclePool2);
+        AllObstaclePools.Add(ObstaclePool3);
         speedIncrement += speedIncrementModifier;
         Obstacles = new List<GameObject>();
         distanceUntilNextSpawn = 19.20f;
@@ -37,7 +50,7 @@ public class ObstacleManager : MonoBehaviour
 
     public void SpawnObstacle()
     {
-        Obstacles.Add(Instantiate(ObstaclePool[Random.Range(0, ObstaclePool.Count)],transform));
+        Obstacles.Add(Instantiate(AllObstaclePools[biomeDepthIndex][Random.Range(0, AllObstaclePools[biomeDepthIndex].Count)],transform));
     }
 
     public float GetObstacleSpeed()

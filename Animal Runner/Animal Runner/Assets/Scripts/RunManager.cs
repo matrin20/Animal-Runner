@@ -61,14 +61,20 @@ public class RunManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI foundAnimalRarityField;
 
+    [Header("Depth switching")]
+    [SerializeField]
+    private List<GameObject> oceanBackgrounds;
+    private PlayerData _playerData;
 
     // Start is called before the first frame update
     void Start()
     {
+        _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
         endScreen.SetActive(false);
         timeRemaining = CalculateRunTime();
         timerProgressing = true;
         rewardText.text = "Currency: 0";
+        ConfigureBiomeDepth();
     }
 
     // Update is called once per frame
@@ -113,7 +119,7 @@ public class RunManager : MonoBehaviour
         {
             //award animal
             foundAnimal = lootManager.GetAnimalReward(0);
-            GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>().AddAnimal(foundAnimal);
+            _playerData.AddAnimal(foundAnimal);
             foundAnimalGUI.sprite = foundAnimal.myGameObject.GetComponent<SpriteRenderer>().sprite;
             timePassedField.text = "Time passed: " + CalculateRunTime() + " seconds";
             currencyEarnedField.text = "Currency earned: " + currencyReward;
@@ -164,7 +170,25 @@ public class RunManager : MonoBehaviour
             currencyReward += Mathf.FloorToInt(baseReward + timedReward);
             //this will throw an exception if the player did not start on menu select due to the DontDestroyOnLoad object being created there
             rewardText.text = "Currency: " + currencyReward;
-            GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>().AddCurrency(currencyReward);
+            _playerData.AddCurrency(currencyReward);
+        }
+
+    }
+
+    private void ConfigureBiomeDepth()
+    {
+        //get headslot item from playerdata
+        //choose background based on headslot item
+        //obstaclemanager should also change based on item
+        if (_playerData.GetHeadSlotItem().itemID == 0)
+        {
+            oceanBackgrounds[0].SetActive(true);
+        } else if (_playerData.GetHeadSlotItem().itemID == 1)
+        {
+            oceanBackgrounds[1].SetActive(true);
+        } else
+        {
+            oceanBackgrounds[2].SetActive(true);
         }
 
     }

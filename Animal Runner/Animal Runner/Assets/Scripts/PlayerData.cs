@@ -9,7 +9,13 @@ public class PlayerData : MonoBehaviour
     [SerializeField]
     private int currency;
 
+    [SerializeField]
+    private List<Animal> allAnimals;
     private List<Animal> obtainedAnimals;
+
+    [SerializeField]
+    private List<Item> headSlotItems;
+    private Item equippedHeadSlotItem;
 
     private int shopLevel;
     //private Building habitatBuilderData;
@@ -25,6 +31,7 @@ public class PlayerData : MonoBehaviour
         //get from playerprefs
         currency = GetCurrency();
         obtainedAnimals = new List<Animal>();
+        GetAnimals();
     }
 
     private void Update()
@@ -58,12 +65,28 @@ public class PlayerData : MonoBehaviour
         else
         {
             obtainedAnimals.Add(animal);
+            PlayerPrefs.SetInt("UnlockedAnimalID" + animal.myID, 1);
         }
 
     }
 
     public List<Animal> GetAnimals()
     {
+        for (int i=0; i<allAnimals.Count; i++)
+        {
+            if (PlayerPrefs.GetInt("UnlockedAnimalID" + i) == 1)
+            {
+                for (int j = 0; j<allAnimals.Count; j++)
+                {
+                    if (allAnimals[j].myID == i)
+                    {
+                        AddAnimal(allAnimals[j]);
+                        //obtainedAnimals.Add(allAnimals[j]);
+                    }
+                }
+            }
+            
+        }
         return obtainedAnimals;
     }
 
@@ -106,14 +129,27 @@ public class PlayerData : MonoBehaviour
         }
     }
 
-    public void SetHeadSlotItem(int value)
+    public void SetHeadSlotItem(Item item)
     {
-        PlayerPrefs.SetInt("HeadSlotItem", value);
+        equippedHeadSlotItem = item;
+        PlayerPrefs.SetInt("HeadSlotItem", equippedHeadSlotItem.itemID);
+        Debug.Log("Set headslot item to: " + item.itemName);
     }
 
-    public int GetHeadSlotItem()
+    public Item GetHeadSlotItem()
     {
-        return PlayerPrefs.GetInt("HeadSlotItem");
+        equippedHeadSlotItem = headSlotItems[PlayerPrefs.GetInt("HeadSlotItem")];
+        return equippedHeadSlotItem;
+    }
+
+    public void SetUnlockedLocks(int index)
+    {
+        PlayerPrefs.SetInt("UnlockedLock" + index, 1);
+    }
+
+    public int GetUnlockedLocks(int index)
+    {
+        return PlayerPrefs.GetInt("UnlockedLock" + index);
     }
 
 }

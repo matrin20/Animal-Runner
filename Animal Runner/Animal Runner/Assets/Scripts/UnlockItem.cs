@@ -13,6 +13,8 @@ public class UnlockItem : MonoBehaviour
     private int currency;
     [SerializeField]
     private TextMeshProUGUI costField;
+    [SerializeField]
+    private int myIndex;
 
     private void Start()
     {
@@ -25,12 +27,19 @@ public class UnlockItem : MonoBehaviour
         currency = _playerData.GetCurrency();
         if (currency > itemToUnlock.itemPrice)
         {
-            slotToUnlock.SetActive(true);
-            gameObject.SetActive(false);
-            costField.gameObject.SetActive(false);
-        } else
+            RemoveLock();
+            _playerData.SetUnlockedLocks(myIndex);
+        }
+        else
         {
             Debug.Log("You don't have enough currency!");
         }
+    }
+
+    public void RemoveLock()
+    {
+        slotToUnlock.SetActive(true);
+        costField.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

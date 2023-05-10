@@ -25,11 +25,13 @@ public class SelectItem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        for (int i = 0; i<headSelectionCircles.Count; i++)
+        for (int i = 0; i < headSelectionCircles.Count; i++)
         {
             headSelectionCircles[i].SetActive(false);
         }
         headSelectionCircles[circleIndex].SetActive(true);
-        _playerData.SetHeadSlotItem(item.itemID);
+        _playerData.SetHeadSlotItem(item);
     }
+
+
 }

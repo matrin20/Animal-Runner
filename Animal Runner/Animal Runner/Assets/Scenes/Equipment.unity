@@ -204,6 +204,7 @@ MonoBehaviour:
   slotToUnlock: {fileID: 0}
   itemToUnlock: {fileID: 0}
   costField: {fileID: 0}
+  myIndex: 2
 --- !u!1 &198367082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1345,7 @@ MonoBehaviour:
   slotToUnlock: {fileID: 0}
   itemToUnlock: {fileID: 0}
   costField: {fileID: 0}
+  myIndex: 4
 --- !u!1001 &1083368341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1425,6 +1427,7 @@ MonoBehaviour:
   slotToUnlock: {fileID: 1793834591}
   itemToUnlock: {fileID: 11400000, guid: d371d3f58fbdf0b448d699470027975a, type: 2}
   costField: {fileID: 698735115}
+  myIndex: 1
 --- !u!61 &1083368344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1687,6 +1690,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1345581892771815411, guid: 10c5dd29b1ac3d744ad80a971c31ab9a, type: 3}
   m_PrefabInstance: {fileID: 1345581894108728473}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366960360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366960362}
+  - component: {fileID: 1366960361}
+  m_Layer: 0
+  m_Name: ItemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1366960361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366960360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484570ced2fd7f468564e0a11f103f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemLocks:
+  - {fileID: 6691984579346029794}
+  - {fileID: 1083368342}
+  - {fileID: 37203558}
+  - {fileID: 1931333406}
+  - {fileID: 1053084230}
+  - {fileID: 2084035085}
+  headSelectionCircles:
+  - {fileID: 1347474280}
+  - {fileID: 786708486}
+  - {fileID: 1245094397}
+--- !u!4 &1366960362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366960360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1385774037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2131,7 @@ MonoBehaviour:
   slotToUnlock: {fileID: 0}
   itemToUnlock: {fileID: 0}
   costField: {fileID: 0}
+  myIndex: 3
 --- !u!1 &1932408875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2506,7 @@ MonoBehaviour:
   slotToUnlock: {fileID: 0}
   itemToUnlock: {fileID: 0}
   costField: {fileID: 0}
+  myIndex: 5
 --- !u!1001 &2119764223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2791,6 +2851,7 @@ MonoBehaviour:
   slotToUnlock: {fileID: 1385774037}
   itemToUnlock: {fileID: 11400000, guid: 8d88409857c64074dbb51da12e3edeff, type: 2}
   costField: {fileID: 502018721}
+  myIndex: 0
 --- !u!61 &6691984579346029796
 BoxCollider2D:
   m_ObjectHideFlags: 0
