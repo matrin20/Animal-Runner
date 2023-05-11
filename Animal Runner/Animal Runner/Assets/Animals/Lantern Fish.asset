@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
-  m_Name: Black Sea Bass
+  m_Name: Lantern Fish
   m_EditorClassIdentifier: 
-  myID: 4
-  myName: Black Sea Bass
-  myHabitat: Epipelagic
-  myCode: G3P7
+  myID: 8
+  myName: Lantern Fish
+  myHabitat: Mesopelagic
+  myCode: L2D1
   myDropRate: 30
-  myGameObject: {fileID: 3601317948541340860, guid: 128bbe8731338ae4d843fbb79d46af61, type: 3}
+  myGameObject: {fileID: 1934131089725127767, guid: 3ef6546807ee6eb40bec26c47d8c881a, type: 3}
   myRarity: Rare

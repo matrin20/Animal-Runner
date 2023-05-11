@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myID: 2
   myName: Clown Fish
-  myHabitat: Epipelagic Zone
+  myHabitat: Epipelagic
   myCode: F1N9
   myDropRate: 100
   myGameObject: {fileID: 1251445578772377175, guid: 662680c19ca23274ebf25125b0292661, type: 3}

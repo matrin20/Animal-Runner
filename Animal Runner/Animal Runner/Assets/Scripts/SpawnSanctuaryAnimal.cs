@@ -7,8 +7,11 @@ public class SpawnSanctuaryAnimal : MonoBehaviour
     private PlayerData _playerData;
     private List<Animal> spawnList;
     [SerializeField]
-    private Transform spawnPoint;
-
+    private Transform epiSpawnPoint;
+    [SerializeField]
+    private Transform mesoSpawnPoint;
+    [SerializeField]
+    private Transform abyssoSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +31,24 @@ public class SpawnSanctuaryAnimal : MonoBehaviour
     {
         foreach(Animal animal in spawnList)
         {
+            Transform spawnPoint;
             //adding a random x pos to spawnpoint within a range
+            if (animal.myHabitat == "Epipelagic")
+            {
+                spawnPoint = epiSpawnPoint;
+            } else if (animal.myHabitat == "Mesopelagic")
+            {
+                spawnPoint = mesoSpawnPoint;
+            } else if (animal.myHabitat == "Abyssopelagic")
+            {
+                spawnPoint = abyssoSpawnPoint;
+            }
+            else
+            {
+                spawnPoint = epiSpawnPoint;
+            }
             Instantiate(animal.myGameObject, spawnPoint.position, Quaternion.identity);
+
         }
     }
 }

@@ -6,14 +6,14 @@ public class RunLoot : MonoBehaviour
 {
 
     public List<Animal> epipelagicLootList = new List<Animal>();
-    public List<Animal> bathypelagicLootList = new List<Animal>();
+    public List<Animal> mesopelagicLootList = new List<Animal>();
     public List<Animal> abyssopelagicLootList = new List<Animal>();
 
     private List<List<Animal>> lootLists = new List<List<Animal>>();
     private void Start()
     {
         lootLists.Add(epipelagicLootList);
-        lootLists.Add(bathypelagicLootList);
+        lootLists.Add(mesopelagicLootList);
         lootLists.Add(abyssopelagicLootList);
     }
 

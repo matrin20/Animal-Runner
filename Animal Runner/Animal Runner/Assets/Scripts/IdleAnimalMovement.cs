@@ -26,18 +26,38 @@ public class IdleAnimalMovement : MonoBehaviour
     private GameObject bottomYBound;
     private float verticleMultiplier;
 
+    [SerializeField]
+    private Animal animalReference;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (animalReference.myHabitat == "Epipelagic")
+        {
+            leftBound = GameObject.Find("LeftXBound");
+            rightBound = GameObject.Find("RightXBound");
+            topYBound = GameObject.Find("TopYBound");
+            bottomYBound = GameObject.Find("BottomYBound");
+        } else if (animalReference.myHabitat == "Mesopelagic")
+        {
+            leftBound = GameObject.Find("LeftXBound2");
+            rightBound = GameObject.Find("RightXBound2");
+            topYBound = GameObject.Find("TopYBound2");
+            bottomYBound = GameObject.Find("BottomYBound2");
+        } else
+        {
+            leftBound = GameObject.Find("LeftXBound3");
+            rightBound = GameObject.Find("RightXBound3");
+            topYBound = GameObject.Find("TopYBound3");
+            bottomYBound = GameObject.Find("BottomYBound3");
+        }
         randomMovementNumber = Random.Range(1f, 4f);
-        leftBound = GameObject.Find("LeftXBound");
-        rightBound = GameObject.Find("RightXBound");
-        topYBound = GameObject.Find("TopYBound");
-        bottomYBound = GameObject.Find("BottomYBound");
+
         yIncrementModifier = 0.1f;
         baseYIncrement = yIncrementModifier;
         verticleMultiplier = 1;
         turnInterval = Random.Range(6, 10);
+
     }
 
     // Update is called once per frame

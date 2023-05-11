@@ -2167,7 +2167,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7fee5410b5e3d8f44be5dfdd6fca03fc, type: 2}
   - {fileID: 11400000, guid: d935ddac63b4a7a48854c774f023de06, type: 2}
   - {fileID: 11400000, guid: 58c4540a93ff16640834852041a16109, type: 2}
-  bathypelagicLootList: []
+  mesopelagicLootList:
+  - {fileID: 11400000, guid: fec25146613a8294d8cd0221b5ca80be, type: 2}
+  - {fileID: 11400000, guid: 7d59cf46c6c86dd43a2283baa77d20c7, type: 2}
+  - {fileID: 11400000, guid: 953126901a013ba42af411b0a1ef4abd, type: 2}
+  - {fileID: 11400000, guid: 4c5c8ecf2e42a3c489ea5ab21244e3d0, type: 2}
   abyssopelagicLootList: []
 --- !u!4 &1206538804
 Transform:

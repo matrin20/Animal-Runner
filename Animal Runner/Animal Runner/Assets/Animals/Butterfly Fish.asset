@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myID: 3
   myName: Butterfly Fish
-  myHabitat: Epipelagic Zone
+  myHabitat: Epipelagic
   myCode: B5M6
   myDropRate: 100
   myGameObject: {fileID: 6191719835025479456, guid: 350f40c3a937609499e46df4afebbda5, type: 3}

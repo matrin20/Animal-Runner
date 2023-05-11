@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
-  m_Name: Black Sea Bass
+  m_Name: Diaphana Fish
   m_EditorClassIdentifier: 
-  myID: 4
-  myName: Black Sea Bass
-  myHabitat: Epipelagic
-  myCode: G3P7
-  myDropRate: 30
-  myGameObject: {fileID: 3601317948541340860, guid: 128bbe8731338ae4d843fbb79d46af61, type: 3}
-  myRarity: Rare
+  myID: 5
+  myName: Diaphana Fish
+  myHabitat: Mesopelagic
+  myCode: T6A1
+  myDropRate: 100
+  myGameObject: {fileID: 3200121049018869792, guid: 333b31665532f654b879c4aa7f19f739, type: 3}
+  myRarity: Common

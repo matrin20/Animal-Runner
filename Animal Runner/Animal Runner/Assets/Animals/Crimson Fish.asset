@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
-  m_Name: Black Sea Bass
+  m_Name: Crimson Fish
   m_EditorClassIdentifier: 
-  myID: 4
-  myName: Black Sea Bass
-  myHabitat: Epipelagic
-  myCode: G3P7
-  myDropRate: 30
-  myGameObject: {fileID: 3601317948541340860, guid: 128bbe8731338ae4d843fbb79d46af61, type: 3}
-  myRarity: Rare
+  myID: 6
+  myName: Crimson Fish
+  myHabitat: Mesopelagic
+  myCode: J7R9
+  myDropRate: 80
+  myGameObject: {fileID: 6883473008385259947, guid: 55919e8de1237f743848ca5ae7aa2bc5, type: 3}
+  myRarity: Uncommon

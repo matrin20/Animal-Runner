@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1997787065, guid: a38563a4da2922643949d038a88efffe, type: 3}
+  m_Sprite: {fileID: -263587952, guid: a38563a4da2922643949d038a88efffe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   yMovementSpeed: 0.1
   leftBound: {fileID: 0}
   rightBound: {fileID: 0}
+  animalReference: {fileID: 11400000, guid: 58c4540a93ff16640834852041a16109, type: 2}
 --- !u!114 &-5359855690156133418
 MonoBehaviour:
   m_ObjectHideFlags: 0

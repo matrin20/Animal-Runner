@@ -65,11 +65,13 @@ public class RunManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> oceanBackgrounds;
     private PlayerData _playerData;
+    private Item _equippedHeadSlot;
 
     // Start is called before the first frame update
     void Start()
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
+        _equippedHeadSlot = _playerData.GetHeadSlotItem();
         endScreen.SetActive(false);
         timeRemaining = CalculateRunTime();
         timerProgressing = true;
@@ -118,7 +120,7 @@ public class RunManager : MonoBehaviour
         if (timeRemaining <= 0)
         {
             //award animal
-            foundAnimal = lootManager.GetAnimalReward(0);
+            foundAnimal = lootManager.GetAnimalReward(_equippedHeadSlot.itemID);
             _playerData.AddAnimal(foundAnimal);
             foundAnimalGUI.sprite = foundAnimal.myGameObject.GetComponent<SpriteRenderer>().sprite;
             timePassedField.text = "Time passed: " + CalculateRunTime() + " seconds";
@@ -180,10 +182,10 @@ public class RunManager : MonoBehaviour
         //get headslot item from playerdata
         //choose background based on headslot item
         //obstaclemanager should also change based on item
-        if (_playerData.GetHeadSlotItem().itemID == 0)
+        if (_equippedHeadSlot.itemID == 0)
         {
             oceanBackgrounds[0].SetActive(true);
-        } else if (_playerData.GetHeadSlotItem().itemID == 1)
+        } else if (_equippedHeadSlot.itemID == 1)
         {
             oceanBackgrounds[1].SetActive(true);
         } else

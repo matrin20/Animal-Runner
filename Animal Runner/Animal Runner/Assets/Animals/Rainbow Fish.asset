@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myID: 1
   myName: Rainbow Fish
-  myHabitat: Epipelagic Zone
+  myHabitat: Epipelagic
   myCode: E8K2
   myDropRate: 100
   myGameObject: {fileID: 3975498175489713480, guid: 3bd787707dffec8488e78bc489df98cb, type: 3}
