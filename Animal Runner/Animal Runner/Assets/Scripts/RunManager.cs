@@ -122,6 +122,7 @@ public class RunManager : MonoBehaviour
             //award animal
             foundAnimal = lootManager.GetAnimalReward(_equippedHeadSlot.itemID);
             _playerData.AddAnimal(foundAnimal);
+            _playerData.SetAnimalCount(foundAnimal);
             foundAnimalGUI.sprite = foundAnimal.myGameObject.GetComponent<SpriteRenderer>().sprite;
             timePassedField.text = "Time passed: " + CalculateRunTime() + " seconds";
             currencyEarnedField.text = "Currency earned: " + currencyReward;

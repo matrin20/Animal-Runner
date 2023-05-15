@@ -16,7 +16,6 @@ public class HabitatSelect : MonoBehaviour
     void Start()
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
-        Debug.Log(habitats[_playerData.GetHabitatLevel() - 1]);
         habitatSelector.SetSceneName(habitats[_playerData.GetHabitatLevel() - 1]);
         //get-function in playerdata that returns the building level for each habitat. 
         //habitatSelector.SetSceneName("Ocean Habitat 1");

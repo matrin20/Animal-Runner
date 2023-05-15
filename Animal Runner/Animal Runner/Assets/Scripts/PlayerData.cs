@@ -57,7 +57,6 @@ public class PlayerData : MonoBehaviour
 
     public void AddAnimal(Animal animal)
     {
-        Debug.Log(animal);
         if (obtainedAnimals.Contains(animal))
         {
             Debug.Log("You already unlocked this animal");
@@ -67,7 +66,6 @@ public class PlayerData : MonoBehaviour
             obtainedAnimals.Add(animal);
             PlayerPrefs.SetInt("UnlockedAnimalID" + animal.myID, 1);
         }
-
     }
 
     public List<Animal> GetAnimals()
@@ -150,6 +148,22 @@ public class PlayerData : MonoBehaviour
     public int GetUnlockedLocks(int index)
     {
         return PlayerPrefs.GetInt("UnlockedLock" + index);
+    }
+
+
+    public void SetAnimalCount(Animal animal)
+    {
+        PlayerPrefs.SetInt("AnimalCount" + animal.myID, GetAnimalCount(animal.myID) + 1);
+    }
+
+    public int GetAnimalCount(int index)
+    {
+        return PlayerPrefs.GetInt("AnimalCount" + index);
+    }
+
+    public List<Animal> GetAllAnimals()
+    {
+        return allAnimals;
     }
 
 }
