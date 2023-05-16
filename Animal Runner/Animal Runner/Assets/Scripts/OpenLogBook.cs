@@ -17,6 +17,8 @@ public class OpenLogBook : MonoBehaviour
     [SerializeField]
     private List<Collider2D> allColliders;
 
+    [SerializeField]
+    private GameObject missionTab;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,7 @@ public class OpenLogBook : MonoBehaviour
     {
         logBook.SetActive(true);
         ToggleColliders(false);
+        CloseOtherTabs();
     }
 
     public void ToggleColliders(bool boolean)
@@ -46,7 +49,8 @@ public class OpenLogBook : MonoBehaviour
         }
     }
 
-    private void SetObtainedAnimals()
+    //this function will only work properly once all animals are implemented. This also means the IDs of the animal need to be changed to match their new order once implemented.
+    public void SetObtainedAnimals()
     {
         //access playerdata and retrieve the number of each specific animal that has been caught.
         //list of the icons belonging to each tier
@@ -62,5 +66,13 @@ public class OpenLogBook : MonoBehaviour
             epipelagicAnimalCounts[i].text = _playerData.GetAnimalCount(i + 1) + "";
         }
 
+    }
+
+    private void CloseOtherTabs()
+    {
+        if (missionTab.activeInHierarchy == true)
+        {
+            missionTab.SetActive(false);
+        }
     }
 }
