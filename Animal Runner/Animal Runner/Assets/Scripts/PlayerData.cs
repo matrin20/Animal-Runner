@@ -81,7 +81,7 @@ public class PlayerData : MonoBehaviour
 
     public List<Animal> GetAnimals()
     {
-        for (int i=0; i<allAnimals.Count; i++)
+        for (int i=0; i<allAnimals.Count +1; i++)
         {
             if (PlayerPrefs.GetInt("UnlockedAnimalID" + i) == 1)
             {
