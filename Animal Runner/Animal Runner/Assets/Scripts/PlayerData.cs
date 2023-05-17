@@ -26,7 +26,7 @@ public class PlayerData : MonoBehaviour
     private int numberOfCurrentMissions;
     private List<Mission> currentMissions;
 
-    private bool isMissionRun;
+    private bool isMissionRun = false;
     private Mission currentMission;
 
     private void Awake()
@@ -56,7 +56,7 @@ public class PlayerData : MonoBehaviour
         return currency;
     }
 
-    public void AddCurrency(int amount)
+    public void ChangeCurrency(int amount)
     {
         if (currency + amount >= 0)
         {
@@ -197,17 +197,27 @@ public class PlayerData : MonoBehaviour
         for (int i = 0; i < PlayerPrefs.GetInt("NumberOfAvailableMissions"); i++)
         {
             //this -1 at missionanimal is necessary because the fish ID's start at one while the list of allFish starts at index 0.
-            Mission mission = new Mission(allAnimals[PlayerPrefs.GetInt("MissionAnimal" + i) -1], PlayerPrefs.GetInt("MissionDuration" + i), PlayerPrefs.GetFloat("MissionDifficulty" + i));
+            Mission mission = new Mission(allAnimals[PlayerPrefs.GetInt("MissionAnimal" + i) -1], PlayerPrefs.GetInt("MissionDuration" + i), PlayerPrefs.GetFloat("MissionDifficulty" + i), i);
 
             currentMissions.Add(mission);
         }
         return currentMissions;
     }
 
-    public void SetMissions(List<Mission> list)
+    public void AddMission(Mission mission)
     {
-        currentMissions = list;
+        if (currentMissions.Count < 3)
+        {
+            currentMissions.Add(mission);
+        }
         PlayerPrefs.SetInt("NumberOfAvailableMissions", currentMissions.Count);
+
+        for (int j=0; j<3; j++)
+        {
+            PlayerPrefs.SetInt("MissionAnimal" + j, 0);
+            PlayerPrefs.SetInt("MissionDuration" + j, 0);
+            PlayerPrefs.SetFloat("MissionDifficulty" + j, 0);
+        }
 
         for (int i=0; i<currentMissions.Count; i++)
         {
@@ -256,5 +266,36 @@ public class PlayerData : MonoBehaviour
         return isMissionRun;
     }
 
+    public void SetIsMissionRun(bool value)
+    {
+        isMissionRun = value;
+    }
+
+    public void RemoveMissionFromList(int index)
+    {
+        currentMissions.RemoveAt(index);
+
+        for (int k = 0; k < currentMissions.Count; k++)
+        {
+            currentMissions[k].SetMissionIndex(k);
+        }
+
+        PlayerPrefs.SetInt("NumberOfAvailableMissions", currentMissions.Count);
+
+        for (int j = 0; j < 3; j++)
+        {
+            PlayerPrefs.SetInt("MissionAnimal" + j, 0);
+            PlayerPrefs.SetInt("MissionDuration" + j, 0);
+            PlayerPrefs.SetFloat("MissionDifficulty" + j, 0);
+        }
+
+        for (int i = 0; i < currentMissions.Count; i++)
+        {
+            PlayerPrefs.SetInt("MissionAnimal" + i, currentMissions[i].GetMissionAnimal().myID);
+            PlayerPrefs.SetInt("MissionDuration" + i, currentMissions[i].GetMissionRunTime());
+            PlayerPrefs.SetFloat("MissionDifficulty" + i, currentMissions[i].GetDifficultyModifier());
+        }
+
+    }
     //next
 }

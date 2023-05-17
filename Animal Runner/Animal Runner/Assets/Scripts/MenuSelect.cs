@@ -12,7 +12,7 @@ public class MenuSelect : MonoBehaviour
         SceneLoader();
     }
 
-    void SceneLoader()
+    public void SceneLoader()
     {
         selectOption = gameObject.GetComponent<MenuSelectItem>().GetSceneName();
         SceneManager.LoadScene(selectOption);

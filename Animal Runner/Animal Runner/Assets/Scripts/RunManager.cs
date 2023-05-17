@@ -74,6 +74,7 @@ public class RunManager : MonoBehaviour
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
         isMissionRun = _playerData.GetIsMissionRun();
+        currentMission = _playerData.GetMissionRun();
         baseTime = _playerData.GetBaseRunTime();
         _equippedHeadSlot = _playerData.GetHeadSlotItem();
         endScreen.SetActive(false);
@@ -130,7 +131,16 @@ public class RunManager : MonoBehaviour
         if (timeRemaining <= 0)
         {
             //award animal
-            foundAnimal = lootManager.GetAnimalReward(_equippedHeadSlot.itemID);
+            if (isMissionRun)
+            {
+                foundAnimal = currentMission.GetMissionAnimal();
+                _playerData.RemoveMissionFromList(_playerData.GetMissionRun().GetMissionIndex());
+                //to update the current mission listings (not ideal)
+            } else
+            {
+                foundAnimal = lootManager.GetAnimalReward(_equippedHeadSlot.itemID);
+            }
+            _playerData.EndMissionRun();
             _playerData.AddAnimal(foundAnimal);
             _playerData.SetAnimalCount(foundAnimal);
             foundAnimalGUI.sprite = foundAnimal.myGameObject.GetComponent<SpriteRenderer>().sprite;
@@ -167,6 +177,7 @@ public class RunManager : MonoBehaviour
 
     public void BackToMapSelect()
     {
+        _playerData.EndMissionRun();
         SceneManager.LoadScene("MenuScreen");
     }
 
@@ -183,14 +194,34 @@ public class RunManager : MonoBehaviour
             currencyReward += Mathf.FloorToInt(baseReward + timedReward);
             //this will throw an exception if the player did not start on menu select due to the DontDestroyOnLoad object being created there
             rewardText.text = "Currency: " + currencyReward;
-            _playerData.AddCurrency(currencyReward);
+            _playerData.ChangeCurrency(currencyReward);
         }
 
     }
 
     private void ConfigureBiomeDepth()
     {
-        oceanBackgrounds[_equippedHeadSlot.itemID].SetActive(true);
+        int biomeIndex;
+
+        if (_playerData.GetIsMissionRun())
+        {
+            if (_playerData.GetMissionRun().GetMissionAnimal().myHabitat == "Mesopelagic")
+            {
+                biomeIndex = 1;
+            } else if (_playerData.GetMissionRun().GetMissionAnimal().myHabitat == "Abyssopelagic")
+            {
+                biomeIndex = 2;
+            } else
+            {
+                biomeIndex = 0;
+            }
+            
+        } else
+        {
+            biomeIndex = _equippedHeadSlot.itemID;
+        }
+
+        oceanBackgrounds[biomeIndex].SetActive(true);
     }
 
 }

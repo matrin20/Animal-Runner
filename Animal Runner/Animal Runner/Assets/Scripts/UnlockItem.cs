@@ -27,6 +27,7 @@ public class UnlockItem : MonoBehaviour
         currency = _playerData.GetCurrency();
         if (currency > itemToUnlock.itemPrice)
         {
+            _playerData.ChangeCurrency(itemToUnlock.itemPrice * -1);
             RemoveLock();
             _playerData.SetUnlockedLocks(myIndex);
         }

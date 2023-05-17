@@ -55,8 +55,8 @@ public class PopulateMissionData : MonoBehaviour
 
     private PlayerData _playerData;
 
-    private int previousNumberOfMissions;
-    private int currentNumberOfMissions;
+    private int previousMissionCounter;
+    private int currentMissionCounter;
     [SerializeField]
     private GenerateMission missionGenerator;
     private List<Mission> _currentMissions;
@@ -76,14 +76,45 @@ public class PopulateMissionData : MonoBehaviour
     [SerializeField]
     private GameObject missionTab;
 
+    [SerializeField]
+    private MissionHolder missionHolder1;
+    [SerializeField]
+    private MissionHolder missionHolder2;
+    [SerializeField]
+    private MissionHolder missionHolder3;
+
+    private List<MissionHolder> missionHolderList;
+
+    [SerializeField]
+    private Sprite defaultSprite;
+
+
+    [SerializeField]
+    private Button missionButton1;
+    [SerializeField]
+    private Button missionButton2;
+    [SerializeField]
+    private Button missionButton3;
+
+    private List<Button> missionButtons;
+
+
+    [SerializeField]
+    private Button deleteButton1;
+    [SerializeField]
+    private Button deleteButton2;
+    [SerializeField]
+    private Button deleteButton3;
+
+    private List<Button> deleteButtons;
 
     // Start is called before the first frame update
     void Start()
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
 
-        currentNumberOfMissions = _playerData.GetMissions().Count;
-        previousNumberOfMissions = currentNumberOfMissions;
+        currentMissionCounter = _playerData.GetMissions().Count;
+        previousMissionCounter = currentMissionCounter;
 
         names = new List<TextMeshProUGUI>();
         names.Add(nameField1);
@@ -115,6 +146,21 @@ public class PopulateMissionData : MonoBehaviour
         notificationList.Add(notification2);
         notificationList.Add(notification3);
 
+        missionHolderList = new List<MissionHolder>();
+        missionHolderList.Add(missionHolder1);
+        missionHolderList.Add(missionHolder2);
+        missionHolderList.Add(missionHolder3);
+
+        missionButtons = new List<Button>();
+        missionButtons.Add(missionButton1);
+        missionButtons.Add(missionButton2);
+        missionButtons.Add(missionButton3);
+
+        deleteButtons = new List<Button>();
+        deleteButtons.Add(deleteButton1);
+        deleteButtons.Add(deleteButton2);
+        deleteButtons.Add(deleteButton3);
+
         if (_playerData.GetUnseenMissionNotifications() > 0)
         {
             notificationList[_playerData.GetUnseenMissionNotifications() - 1].SetActive(true);
@@ -130,9 +176,9 @@ public class PopulateMissionData : MonoBehaviour
     //perhaps this function shouldn't be in update to maximize efficiency.
     private void CheckForMissionUpdates()
     {
-        if (currentNumberOfMissions != previousNumberOfMissions)
+        if (currentMissionCounter != previousMissionCounter)
         {
-            previousNumberOfMissions = currentNumberOfMissions;
+            previousMissionCounter = currentMissionCounter;
             PopulateMissions();
             if (missionTab.activeInHierarchy == false)
             {
@@ -152,18 +198,35 @@ public class PopulateMissionData : MonoBehaviour
 
     public void IncreaseCurrentNumberOfMissions()
     {
-        currentNumberOfMissions += 1;
+        currentMissionCounter += 1;
+    }
+
+    public void DecreaseCurrentNumberOfMissions()
+    {
+        currentMissionCounter -= 1;
     }
 
     public int GetNumberOfMissions()
     {
-        return currentNumberOfMissions;
+        return currentMissionCounter;
     }
 
-    private void PopulateMissions()
+    public void PopulateMissions()
     {
         _currentMissions = _playerData.GetMissions();
-        Debug.Log(_currentMissions[0]);
+
+        for (int j = 0; j < 3; j++)
+        {
+            names[j].text = "-";
+            rarities[j].text = "-";
+            difficulties[j].text = "-";
+            times[j].text = "-";
+            animalImages[j].sprite = defaultSprite;
+            missionHolderList[j].RemoveMyMission();
+            missionButtons[j].enabled = false;
+            deleteButtons[j].enabled = false;
+        }
+
         if (_currentMissions.Count > 0)
         {
             for (int i = 0; i < _currentMissions.Count; i++)
@@ -173,6 +236,9 @@ public class PopulateMissionData : MonoBehaviour
                 difficulties[i].text = _currentMissions[i].GetDifficultyModifier() + "";
                 times[i].text = _currentMissions[i].GetMissionRunTime() + " seconds";
                 animalImages[i].sprite = _currentMissions[i].GetMissionAnimal().myGameObject.GetComponent<SpriteRenderer>().sprite;
+                missionHolderList[i].SetMyMission(_currentMissions[i]);
+                missionButtons[i].enabled = true;
+                deleteButtons[i].enabled = true;
             }
         }
     }

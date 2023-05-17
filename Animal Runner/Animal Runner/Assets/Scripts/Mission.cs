@@ -7,12 +7,13 @@ public class Mission
     private Animal animalReward;
     private int runTime;
     private float difficultyModifier;
-
-    public Mission(Animal reward, int time, float modifier)
+    private int missionIndex;
+    public Mission(Animal reward, int time, float modifier, int index)
     {
         this.animalReward = reward;
         this.runTime = time;
         this.difficultyModifier = modifier;
+        this.missionIndex = index;
     }
 
     public Animal GetMissionAnimal()
@@ -30,4 +31,13 @@ public class Mission
         return difficultyModifier;
     }
 
+    public int GetMissionIndex()
+    {
+        return missionIndex;
+    }
+
+    public void SetMissionIndex(int value)
+    {
+        missionIndex = value;
+    }
 }

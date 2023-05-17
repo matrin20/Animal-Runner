@@ -53,17 +53,14 @@ public class UpgradeBuilding : MonoBehaviour
         //shopBuildings = _playerData.GetBuildingData();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void IncreaseShopLevel()
     {
         _currency = _playerData.GetCurrency();
         if (currentShopLevel < 3 && _currency > shopUpgradePrice)
         {
+            _playerData.ChangeCurrency(shopUpgradePrice * -1);
             currentShopLevel += 1;
             _playerData.SetShopLevel(currentShopLevel);
             Destroy(currentShopBuilding);
@@ -88,6 +85,7 @@ public class UpgradeBuilding : MonoBehaviour
         _currency = _playerData.GetCurrency();
         if (currentHabitatLevel < 3 && _currency > habitatUpgradePrice)
         {
+            _playerData.ChangeCurrency(habitatUpgradePrice * -1);
             currentHabitatLevel += 1;
             _playerData.SetHabitatLevel(currentHabitatLevel);
             Destroy(currentHabitatBuilding);

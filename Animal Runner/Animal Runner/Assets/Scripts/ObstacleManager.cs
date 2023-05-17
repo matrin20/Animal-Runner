@@ -33,7 +33,28 @@ public class ObstacleManager : MonoBehaviour
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
         isMissionRun = _playerData.GetIsMissionRun();
-        biomeDepthIndex = _playerData.GetHeadSlotItem().itemID;
+
+        if (isMissionRun)
+        {
+            if (_playerData.GetMissionRun().GetMissionAnimal().myHabitat == "Mesopelagic")
+            {
+                biomeDepthIndex = 1;
+            }
+            else if (_playerData.GetMissionRun().GetMissionAnimal().myHabitat == "Abyssopelagic")
+            {
+                biomeDepthIndex = 2;
+            }
+            else
+            {
+                biomeDepthIndex = 0;
+            }
+
+            speedIncrement = _playerData.GetMissionRun().GetDifficultyModifier();
+        } else
+        {
+            biomeDepthIndex = _playerData.GetHeadSlotItem().itemID;
+        }
+
         AllObstaclePools = new List<List<GameObject>>();
         AllObstaclePools.Add(ObstaclePool);
         AllObstaclePools.Add(ObstaclePool2);

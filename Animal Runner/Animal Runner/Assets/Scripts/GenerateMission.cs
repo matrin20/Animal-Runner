@@ -126,8 +126,9 @@ public class GenerateMission : MonoBehaviour
 
         difficultyModifier = difficulty;
 
-        currentMissions.Add(new Mission(animalReward, missionDuration, difficultyModifier));
-        _playerData.SetMissions(currentMissions);
+        int missionIndex = _playerData.GetMissionCount();
+
+        _playerData.AddMission(new Mission(animalReward, missionDuration, difficultyModifier, missionIndex));
     }
 
 
