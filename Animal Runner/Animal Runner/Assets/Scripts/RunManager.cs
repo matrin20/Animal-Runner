@@ -10,10 +10,9 @@ public class RunManager : MonoBehaviour
     //needs a timer that ticks down
     //needs an event on timer = 0
     //needs variables that can be adjusted using items
-    [Header("Time & run related variables")]
-    [SerializeField]
     private float baseTime;
     private float timeAdjustment;
+    [Header("Time & run related variables")]
     [SerializeField]
     private float timeRemaining;
     private bool timerProgressing = false;
@@ -67,10 +66,15 @@ public class RunManager : MonoBehaviour
     private PlayerData _playerData;
     private Item _equippedHeadSlot;
 
+    private bool isMissionRun = false;
+    private Mission currentMission;
+
     // Start is called before the first frame update
     void Start()
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
+        isMissionRun = _playerData.GetIsMissionRun();
+        baseTime = _playerData.GetBaseRunTime();
         _equippedHeadSlot = _playerData.GetHeadSlotItem();
         endScreen.SetActive(false);
         timeRemaining = CalculateRunTime();
@@ -97,7 +101,13 @@ public class RunManager : MonoBehaviour
 
     private float CalculateRunTime()
     {
-        return baseTime + timeAdjustment;
+        if (isMissionRun)
+        {
+            return currentMission.GetMissionRunTime() + timeAdjustment;
+        } else
+        {
+            return baseTime + timeAdjustment;
+        }
     }
 
     private void GameTimer()
@@ -180,20 +190,7 @@ public class RunManager : MonoBehaviour
 
     private void ConfigureBiomeDepth()
     {
-        //get headslot item from playerdata
-        //choose background based on headslot item
-        //obstaclemanager should also change based on item
-        if (_equippedHeadSlot.itemID == 0)
-        {
-            oceanBackgrounds[0].SetActive(true);
-        } else if (_equippedHeadSlot.itemID == 1)
-        {
-            oceanBackgrounds[1].SetActive(true);
-        } else
-        {
-            oceanBackgrounds[2].SetActive(true);
-        }
-
+        oceanBackgrounds[_equippedHeadSlot.itemID].SetActive(true);
     }
 
 }

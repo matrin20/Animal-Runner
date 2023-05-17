@@ -26,10 +26,13 @@ public class ObstacleManager : MonoBehaviour
     private PlayerData _playerData;
     private int biomeDepthIndex;
 
+    private bool isMissionRun;
+
     // Start is called before the first frame update
     void Start()
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
+        isMissionRun = _playerData.GetIsMissionRun();
         biomeDepthIndex = _playerData.GetHeadSlotItem().itemID;
         AllObstaclePools = new List<List<GameObject>>();
         AllObstaclePools.Add(ObstaclePool);
@@ -94,6 +97,11 @@ public class ObstacleManager : MonoBehaviour
             speedIncreaseTimer = 0;
             SetGlobalObstacleSpeed(obstacleSpeed + speedIncrement);
         }
+    }
+
+    private void SetSpeedIncrement()
+    {
+       // speedIncrement += _playerData.get
     }
 
 }

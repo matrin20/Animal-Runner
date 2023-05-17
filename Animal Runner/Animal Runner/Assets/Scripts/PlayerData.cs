@@ -17,8 +17,17 @@ public class PlayerData : MonoBehaviour
     private List<Item> headSlotItems;
     private Item equippedHeadSlotItem;
 
+    [SerializeField]
+    private int baseRunTime;
+
     private int shopLevel;
     //private Building habitatBuilderData;
+
+    private int numberOfCurrentMissions;
+    private List<Mission> currentMissions;
+
+    private bool isMissionRun;
+    private Mission currentMission;
 
     private void Awake()
     {
@@ -32,6 +41,8 @@ public class PlayerData : MonoBehaviour
         currency = GetCurrency();
         obtainedAnimals = new List<Animal>();
         GetAnimals();
+
+        currentMissions = new List<Mission>();
     }
 
     private void Update()
@@ -165,5 +176,85 @@ public class PlayerData : MonoBehaviour
     {
         return allAnimals;
     }
+    public int GetBaseRunTime()
+    {
+        return baseRunTime;
+    }
 
+    public void SetBaseRuneTime(int value)
+    {
+        if (value > 0)
+        {
+            baseRunTime = value;
+        }
+    }
+
+
+    public List<Mission> GetMissions()
+    {
+        currentMissions = new List<Mission>();
+        //get data from playerprefs
+        for (int i = 0; i < PlayerPrefs.GetInt("NumberOfAvailableMissions"); i++)
+        {
+            //this -1 at missionanimal is necessary because the fish ID's start at one while the list of allFish starts at index 0.
+            Mission mission = new Mission(allAnimals[PlayerPrefs.GetInt("MissionAnimal" + i) -1], PlayerPrefs.GetInt("MissionDuration" + i), PlayerPrefs.GetFloat("MissionDifficulty" + i));
+
+            currentMissions.Add(mission);
+        }
+        return currentMissions;
+    }
+
+    public void SetMissions(List<Mission> list)
+    {
+        currentMissions = list;
+        PlayerPrefs.SetInt("NumberOfAvailableMissions", currentMissions.Count);
+
+        for (int i=0; i<currentMissions.Count; i++)
+        {
+            PlayerPrefs.SetInt("MissionAnimal" + i, currentMissions[i].GetMissionAnimal().myID);
+            PlayerPrefs.SetInt("MissionDuration" + i, currentMissions[i].GetMissionRunTime());
+            PlayerPrefs.SetFloat("MissionDifficulty" + i, currentMissions[i].GetDifficultyModifier());
+        }
+    }
+
+    public int GetMissionCount()
+    {
+        return PlayerPrefs.GetInt("NumberOfAvailableMissions");
+    }
+
+
+    public void SetUnseenMissionNotification(int value)
+    {
+        PlayerPrefs.SetInt("UnseenMissionNotifications", value);
+    }
+
+    public int GetUnseenMissionNotifications()
+    {
+        return PlayerPrefs.GetInt("UnseenMissionNotifications");
+    }
+
+    //mission getters and setters
+    public void SetMissionRun(Mission mission)
+    {
+        currentMission = mission;
+        isMissionRun = true;
+    }
+
+    public void EndMissionRun()
+    {
+        currentMission = null;
+        isMissionRun = false;
+    }
+
+    public Mission GetMissionRun()
+    {
+        return currentMission;
+    }
+
+    public bool GetIsMissionRun()
+    {
+        return isMissionRun;
+    }
+
+    //next
 }
