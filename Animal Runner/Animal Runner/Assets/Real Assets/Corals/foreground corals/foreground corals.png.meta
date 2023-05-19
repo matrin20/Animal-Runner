@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: b7801d5624f8f984c9e29bc4bec84500
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: foreground corals_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 621
+        width: 289
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc34dd2b015bfd74580b502abfc00bfc
+      internalID: 230779313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 819
+        width: 478
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63bb88583d3d704f945fef96dfc13a9
+      internalID: -1716925034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_2
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 821
+        width: 478
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861e24381a9835c4689d1fc307e4156d
+      internalID: -1883206073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_3
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 817
+        width: 478
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5986ea3b1ea8f47a659332178e960e
+      internalID: -829237321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_11
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 601
+        width: 233
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03a021d99fffb84da8e3b7bede63400
+      internalID: -1370137304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_12
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 609
+        width: 263
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c67b5e9620a3d41ac726376d790e67
+      internalID: -1827922641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_13
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 610
+        width: 233
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53dbea991d562414e9ce0927b9a5e4b4
+      internalID: -1874085763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_14
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 611
+        width: 263
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728bdec90fad9d7408392e3d46e9826d
+      internalID: -1309719769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_29
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 297
+        width: 322
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ed1eec9faa9c94d844c5220a22f3da
+      internalID: 354851882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_33
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 311
+        width: 342
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1e6b147c12b5849ab04156d7d65479
+      internalID: -89177893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_34
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 336
+        width: 450
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca6ff2a2f8df414cb08e47e76b82f64
+      internalID: -1334473511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_65
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 47
+        width: 306
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aea6ff411324543944bb0fed5e8bfd
+      internalID: -1802216331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_66
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 6
+        width: 325
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9e9c511ad34c9449cee7695fa5869c
+      internalID: 607092485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_67
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 19
+        width: 325
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bd7c153d8d71f41a3b96e789f8516f
+      internalID: -1198133542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_68
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 27
+        width: 205
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ed59efb5da6614dac63241bc0f1c30
+      internalID: -1764152074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_69
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 24
+        width: 369
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4fe44863fd0ce479c663545b27c957
+      internalID: 1003140680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_4
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 608
+        width: 479
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2873db547257ffe458a4685e4a1b3de6
+      internalID: 527390792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground corals_5
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 277
+        width: 472
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a9a7bd73d7ee14ab648bc45278a204
+      internalID: -2133704444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      foreground corals_4: 527390792
+      foreground corals_17: 903858556
+      foreground corals_39: 769529525
+      foreground corals_26: 900864876
+      foreground corals_50: 894192580
+      foreground corals_2: -1883206073
+      foreground corals_59: 45123976
+      foreground corals_60: -1049011414
+      foreground corals_9: 348178559
+      foreground corals_44: -160679220
+      foreground corals_46: -449817268
+      foreground corals_12: -1827922641
+      foreground corals_16: -50510538
+      foreground corals_21: -1385990829
+      foreground corals_22: -1676029785
+      foreground corals_45: -1049204082
+      foreground corals_3: -829237321
+      foreground corals_53: -812461977
+      foreground corals_52: 210810321
+      foreground corals_48: -1584118603
+      foreground corals_14: -1309719769
+      foreground corals_27: -1929056879
+      foreground corals_67: -1198133542
+      foreground corals_66: 607092485
+      foreground corals_43: 1202667315
+      foreground corals_0: 230779313
+      foreground corals_55: 552129595
+      foreground corals_62: -1971929628
+      foreground corals_5: -2133704444
+      foreground corals_7: -1662630785
+      foreground corals_69: 1003140680
+      foreground corals_51: -854889401
+      foreground corals_68: -1764152074
+      foreground corals_10: 904559966
+      foreground corals_13: -1874085763
+      foreground corals_58: 1666245432
+      foreground corals_32: 593265049
+      foreground corals_42: 2002555184
+      foreground corals_57: 1161494893
+      foreground corals_8: 1296330060
+      foreground corals_1: -1716925034
+      foreground corals_38: -34935743
+      foreground corals_40: -1133940977
+      foreground corals_49: -726898639
+      foreground corals_6: -1319208393
+      foreground corals_19: -1029268550
+      foreground corals_35: -1681251701
+      foreground corals_11: -1370137304
+      foreground corals_64: 1906098868
+      foreground corals_65: -1802216331
+      foreground corals_33: -89177893
+      foreground corals_30: 35475005
+      foreground corals_24: 1609547911
+      foreground corals_63: 1287666273
+      foreground corals_20: -401342804
+      foreground corals_56: 721991108
+      foreground corals_29: 354851882
+      foreground corals_31: 2138624081
+      foreground corals_18: 1812119745
+      foreground corals_34: -1334473511
+      foreground corals_36: -1390263687
+      foreground corals_37: -1831044168
+      foreground corals_47: -1066928202
+      foreground corals_23: -624192538
+      foreground corals_54: 1931908199
+      foreground corals_41: -807383262
+      foreground corals_15: -363421309
+      foreground corals_28: -1243469401
+      foreground corals_25: 592830645
+      foreground corals_61: 1932074151
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

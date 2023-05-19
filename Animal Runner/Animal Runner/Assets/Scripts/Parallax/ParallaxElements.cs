@@ -10,12 +10,22 @@ public class ParallaxElements : MonoBehaviour
     private GameObject parallaxRightPoint;
     [SerializeField]
     private float parallaxSpeed;
-    
-    
+    private float foreGroundParallaxSpeed;
+
+    [SerializeField]
+    private bool isForeGroundElement;
+    private float speedIncreaseTimer = 0;
+    private float speedIncreaseInterval = 3;
+
+    [SerializeField]
+    private ObstacleManager _obstacleManager;
+    private float speedIncrement;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreGroundParallaxSpeed = parallaxSpeed;
+        speedIncrement = _obstacleManager.GetSpeedIncrement();
     }
 
     // Update is called once per frame
@@ -23,6 +33,7 @@ public class ParallaxElements : MonoBehaviour
     {
         ResetParallaxElement();
         ParallaxMovement();
+        SpeedIncrease();
     }
 
     private void ResetParallaxElement()
@@ -35,12 +46,42 @@ public class ParallaxElements : MonoBehaviour
 
     private void ParallaxMovement()
     {
-        float step = parallaxSpeed * Time.deltaTime;
+        float step;
+
+        if (isForeGroundElement)
+        {
+            step = foreGroundParallaxSpeed * Time.deltaTime;
+        }
+        else
+        {
+            step = parallaxSpeed * Time.deltaTime;
+        }
 
         gameObject.transform.position = new Vector2(gameObject.transform.position.x - step, gameObject.transform.position.y);
     }
 
 
+    private void SpeedIncrease()
+    {
+        if (isForeGroundElement)
+        {
+            if (speedIncreaseTimer < speedIncreaseInterval)
+            {
+                speedIncreaseTimer += Time.deltaTime;
+            }
+            else
+            {
+                IncreaseParallaxSpeed(speedIncrement);
+                speedIncreaseTimer = 0;
+            }
+        }
+    }
+
+    private void IncreaseParallaxSpeed(float value)
+    {
+        Debug.Log("check");
+        foreGroundParallaxSpeed = foreGroundParallaxSpeed + value;
+    }
 
 
 

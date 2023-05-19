@@ -125,4 +125,9 @@ public class ObstacleManager : MonoBehaviour
        // speedIncrement += _playerData.get
     }
 
+    public float GetSpeedIncrement()
+    {
+        return speedIncrement;
+    }
+
 }

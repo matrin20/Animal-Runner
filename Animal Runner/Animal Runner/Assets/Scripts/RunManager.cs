@@ -69,6 +69,9 @@ public class RunManager : MonoBehaviour
     private bool isMissionRun = false;
     private Mission currentMission;
 
+    [SerializeField]
+    private List<ParallaxElements> _parallaxElements;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -150,6 +153,7 @@ public class RunManager : MonoBehaviour
             foundAnimalRarityField.text = "Rarity: " + foundAnimal.myRarity;
         }
 
+        DisableParallaxMovement();
 
         //game states
         endScreen.SetActive(true);
@@ -223,5 +227,14 @@ public class RunManager : MonoBehaviour
 
         oceanBackgrounds[biomeIndex].SetActive(true);
     }
+
+    private void DisableParallaxMovement()
+    {
+        for (int i=0; i< _parallaxElements.Count; i++)
+        {
+            _parallaxElements[i].enabled = false;
+        }
+    }
+
 
 }
