@@ -69,8 +69,9 @@ public class RunManager : MonoBehaviour
     private bool isMissionRun = false;
     private Mission currentMission;
 
-    [SerializeField]
     private List<ParallaxElements> _parallaxElements;
+    [SerializeField]
+    private ParallaxBiomeManager _parallaxBiomeManager;
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +86,9 @@ public class RunManager : MonoBehaviour
         timerProgressing = true;
         rewardText.text = "Currency: 0";
         ConfigureBiomeDepth();
+
+
+        _parallaxElements = new List<ParallaxElements>();
     }
 
     // Update is called once per frame
@@ -230,6 +234,8 @@ public class RunManager : MonoBehaviour
 
     private void DisableParallaxMovement()
     {
+        _parallaxElements = _parallaxBiomeManager.GetParallaxElements();
+
         for (int i=0; i< _parallaxElements.Count; i++)
         {
             _parallaxElements[i].enabled = false;

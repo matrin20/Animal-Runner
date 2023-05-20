@@ -11,6 +11,7 @@ public class ParallaxBiomeManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> abyssoParallaxObjects;
     private List<List<GameObject>> allParallaxObjects;
+    private List<ParallaxElements> allParallaxElements;
     private PlayerData _playerData;
     private int currentBiome;
 
@@ -22,6 +23,8 @@ public class ParallaxBiomeManager : MonoBehaviour
         allParallaxObjects.Add(epiParallaxObjects);
         allParallaxObjects.Add(mesoParallaxObjects);
         allParallaxObjects.Add(abyssoParallaxObjects);
+
+        allParallaxElements = new List<ParallaxElements>();
 
         for (int i=0; i < epiParallaxObjects.Count; i++)
         {
@@ -39,6 +42,7 @@ public class ParallaxBiomeManager : MonoBehaviour
         }
 
         BiomeChecker();
+        CreateParallaxList();
     }
 
     // Update is called once per frame
@@ -56,6 +60,31 @@ public class ParallaxBiomeManager : MonoBehaviour
             allParallaxObjects[currentBiome][i].SetActive(true);
         }
 
+    }
+
+    private void CreateParallaxList()
+    {
+        for (int i = 0; i < epiParallaxObjects.Count; i++)
+        {
+            allParallaxElements.Add(epiParallaxObjects[i].GetComponent<ParallaxElements>());
+        }
+
+        for (int j = 0; j < mesoParallaxObjects.Count; j++)
+        {
+            allParallaxElements.Add(mesoParallaxObjects[j].GetComponent<ParallaxElements>());
+        }
+
+        for (int k = 0; k < abyssoParallaxObjects.Count; k++)
+        {
+            allParallaxElements.Add(abyssoParallaxObjects[k].GetComponent<ParallaxElements>());
+        }
+    }
+
+
+
+    public List<ParallaxElements> GetParallaxElements()
+    {
+        return allParallaxElements;
     }
 
 
