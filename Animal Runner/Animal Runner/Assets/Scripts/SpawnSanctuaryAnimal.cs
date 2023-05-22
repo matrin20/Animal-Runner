@@ -21,11 +21,6 @@ public class SpawnSanctuaryAnimal : MonoBehaviour
         SpawnAnimal();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void SpawnAnimal()
     {

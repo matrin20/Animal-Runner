@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
+  m_Name: epifish 3
+  m_EditorClassIdentifier: 
+  myID: 3
+  myName: Spotted Fish
+  myHabitat: Epipelagic
+  myCode: B5M6
+  myDropRate: 100
+  myGameObject: {fileID: 3050981882194447710, guid: cdd4f7d51b6333142b2115a35a264d18, type: 3}
+  myRarity: Common

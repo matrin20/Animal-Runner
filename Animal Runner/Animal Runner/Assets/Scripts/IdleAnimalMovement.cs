@@ -10,7 +10,7 @@ public class IdleAnimalMovement : MonoBehaviour
     private float yMovementSpeed;
     private float timer;
     private int randomNumber;
-    private int turnMultiplier;
+    private float turnMultiplier;
     private float xStep;
     private float yStep;
     private float randomMovementNumber;
@@ -72,7 +72,7 @@ public class IdleAnimalMovement : MonoBehaviour
         if (transform.position.x < leftBound.transform.position.x || transform.position.x > rightBound.transform.position.x)
         {
             turnMultiplier = -1;
-            turnMultiplier *= Mathf.FloorToInt(transform.localScale.x);
+            turnMultiplier *= transform.localScale.x;
             transform.localScale = new Vector2(turnMultiplier, transform.localScale.y);
         }
 
@@ -93,7 +93,7 @@ public class IdleAnimalMovement : MonoBehaviour
                 turnMultiplier = 1;
             }
 
-            turnMultiplier *= Mathf.FloorToInt(transform.localScale.x);
+            turnMultiplier *= transform.localScale.x;
             transform.localScale = new Vector2 (turnMultiplier, transform.localScale.y);
         }
     }
