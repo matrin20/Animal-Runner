@@ -35,6 +35,8 @@ public class UnlockItem : MonoBehaviour
         {
             Debug.Log("You don't have enough currency!");
         }
+
+        GameObject.Find("Currency").GetComponent<DisplayCurrency>().SetDisplayCurrency();
     }
 
     public void RemoveLock()

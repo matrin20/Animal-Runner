@@ -85,18 +85,19 @@ public class PlayerData : MonoBehaviour
 
     public List<Animal> GetAnimals()
     {
-        for (int i=0; i<allAnimals.Count +1; i++)
+        for (int i=0; i<allAnimals.Count + 1; i++)
         {
             if (PlayerPrefs.GetInt("UnlockedAnimalID" + i) == 1)
             {
-                for (int j = 0; j<allAnimals.Count; j++)
-                {
-                    if (allAnimals[j].myID == i)
-                    {
-                        AddAnimal(allAnimals[j]);
-                        //obtainedAnimals.Add(allAnimals[j]);
-                    }
-                }
+                AddAnimal(allAnimals[i - 1]);
+                //for (int j = 0; j<allAnimals.Count; j++)
+                //{
+                //    if (allAnimals[j].myID == i)
+                //    {
+                //        AddAnimal(allAnimals[j]);
+                //        //obtainedAnimals.Add(allAnimals[j]);
+                //    }
+                //}
             }
             
         }
@@ -130,6 +131,7 @@ public class PlayerData : MonoBehaviour
 
     public void SetHabitatLevel(int value)
     {
+        Debug.Log(value);
         PlayerPrefs.SetInt("HabitatLevel", value);
         //go into player prefs, enable certain variables with effects.
     }

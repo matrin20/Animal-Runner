@@ -21,20 +21,23 @@ public class UpgradeBuilding : MonoBehaviour
     public List<Building> shopBuildings;
     public List<Building> habitatBuildings;
 
+    [SerializeField]
+    private GameObject upgradeButton;
+
     // Start is called before the first frame update
     void Start()
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
-        currentShopLevel = _playerData.GetShopLevel();
-        if (currentShopLevel < 3)
-        {
-            shopUpgradePrice = shopBuildings[currentShopLevel].buildingCost;
-            shopPriceField.text = "Upgrade Cost: " + shopUpgradePrice;
-        } else
-        {
-            shopPriceField.text = "Max Level";
-        }
-        currentShopBuilding = Instantiate(shopBuildings[currentShopLevel-1].buildingPrefab);
+        //currentShopLevel = _playerData.GetShopLevel();
+        //if (currentShopLevel < 3)
+        //{
+        //    shopUpgradePrice = shopBuildings[currentShopLevel].buildingCost;
+        //    shopPriceField.text = "Upgrade Cost: " + shopUpgradePrice;
+        //} else
+        //{
+        //    shopPriceField.text = "Max Level";
+        //}
+        //currentShopBuilding = Instantiate(shopBuildings[currentShopLevel-1].buildingPrefab);
 
 
         currentHabitatLevel = _playerData.GetHabitatLevel();
@@ -46,8 +49,9 @@ public class UpgradeBuilding : MonoBehaviour
         else
         {
             habitatPriceField.text = "Max Level";
+            upgradeButton.SetActive(false);
         }
-        currentHabitatBuilding = Instantiate(habitatBuildings[currentHabitatLevel - 1].buildingPrefab);
+        //currentHabitatBuilding = Instantiate(habitatBuildings[currentHabitatLevel - 1].buildingPrefab);
 
 
         //shopBuildings = _playerData.GetBuildingData();
@@ -88,8 +92,8 @@ public class UpgradeBuilding : MonoBehaviour
             _playerData.ChangeCurrency(habitatUpgradePrice * -1);
             currentHabitatLevel += 1;
             _playerData.SetHabitatLevel(currentHabitatLevel);
-            Destroy(currentHabitatBuilding);
-            currentHabitatBuilding = Instantiate(habitatBuildings[currentHabitatLevel - 1].buildingPrefab);
+            //Destroy(currentHabitatBuilding);
+            //currentHabitatBuilding = Instantiate(habitatBuildings[currentHabitatLevel - 1].buildingPrefab);
             if (currentHabitatLevel < 3)
             {
                 habitatUpgradePrice = habitatBuildings[currentHabitatLevel].buildingCost;
@@ -99,6 +103,7 @@ public class UpgradeBuilding : MonoBehaviour
             else
             {
                 habitatPriceField.text = "Max Level";
+                upgradeButton.SetActive(false);
             }
         }
         else if (_currency < habitatUpgradePrice)
