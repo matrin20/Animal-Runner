@@ -59,7 +59,12 @@ public class ObstacleManager : MonoBehaviour
         AllObstaclePools.Add(ObstaclePool);
         AllObstaclePools.Add(ObstaclePool2);
         AllObstaclePools.Add(ObstaclePool3);
-        speedIncrement += speedIncrementModifier;
+
+        SpeedModifierCalculation();
+        speedIncrement -= speedIncrementModifier;
+        Debug.Log(speedIncrement);
+
+
         Obstacles = new List<GameObject>();
         distanceUntilNextSpawn = 19.20f;
         SpawnObstacle();
@@ -120,14 +125,28 @@ public class ObstacleManager : MonoBehaviour
         }
     }
 
-    private void SetSpeedIncrement()
-    {
-       // speedIncrement += _playerData.get
-    }
-
     public float GetSpeedIncrement()
     {
         return speedIncrement;
+    }
+
+    private void SpeedModifierCalculation()
+    {
+        Item flipperslot = _playerData.GetFlipperSlot();
+
+        if (flipperslot.itemID == 3)
+        {
+            speedIncrementModifier = speedIncrement / 2;
+
+        } else if (flipperslot.itemID == 4)
+        {
+            speedIncrementModifier = speedIncrement / 4;
+        } else if (flipperslot.itemID == 5)
+        {
+            speedIncrementModifier = 0;
+        }
+
+
     }
 
 }

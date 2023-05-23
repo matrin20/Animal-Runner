@@ -10,6 +10,8 @@ public class ItemManager : MonoBehaviour
     private List<GameObject> itemLocks;
     [SerializeField]
     private List<GameObject> headSelectionCircles;
+    [SerializeField]
+    private List<GameObject> flipperSelectionCircles;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,7 @@ public class ItemManager : MonoBehaviour
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
         RemoveLocks();
         GetHeadSelectionCircle();
+        GetFlipperSelectionCircle();
     }
 
     // Update is called once per frame
@@ -45,6 +48,13 @@ public class ItemManager : MonoBehaviour
         headSelectionCircles[_playerData.GetHeadSlotItem().itemID].SetActive(true);
     }
 
-
+    public void GetFlipperSelectionCircle()
+    {
+        for (int i = 0; i < flipperSelectionCircles.Count; i++)
+        {
+            flipperSelectionCircles[i].SetActive(false);
+        }
+        flipperSelectionCircles[_playerData.GetFlipperSlot().itemID - 3].SetActive(true);
+    }
 
 }

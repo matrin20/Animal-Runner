@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
-  m_Name: Lantern Fish
+  m_Name: mesofish 8
   m_EditorClassIdentifier: 
-  myID: 8
-  myName: Lantern Fish
+  myID: 18
+  myName: Toxic Grouper
   myHabitat: Mesopelagic
-  myCode: L2D1
-  myDropRate: 30
-  myGameObject: {fileID: 1934131089725127767, guid: 3ef6546807ee6eb40bec26c47d8c881a, type: 3}
-  myRarity: Rare
+  myCode: H6F2
+  myDropRate: 70
+  myGameObject: {fileID: 6112493176921067831, guid: df2c0ee9f8340734e8a8d9552b8c20dc, type: 3}
+  myRarity: Uncommon

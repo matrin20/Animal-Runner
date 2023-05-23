@@ -18,31 +18,24 @@ public class AnimalClick : MonoBehaviour
 
     private GameObject animalInformation;
 
-    [SerializeField]
-    private GameObject habitat1AnimalInfo;
-    [SerializeField]
-    private GameObject habitat2AnimalInfo;
+    private GameObject canvas;
 
-    private PlayerData _playerData;
-
-    void Start()
+    private void Awake()
     {
+        canvas = GameObject.Find("Canvas");
+
+        animalInformation = canvas.GetComponent<Transform>().GetChild(0).gameObject;
+
         animalInformationField = GameObject.Find("AnimalInformation");
         nameField = GameObject.Find("Name").GetComponent<TextMeshProUGUI>();
         habitatField = GameObject.Find("Habitat").GetComponent<TextMeshProUGUI>();
         rarityField = GameObject.Find("Rarity").GetComponent<TextMeshProUGUI>();
         codeField = GameObject.Find("ShareCode").GetComponent<TextMeshProUGUI>();
         animalSpriteField = GameObject.Find("AnimalSprite").GetComponent<Image>();
+    }
 
-        _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
-
-        if (_playerData.GetHeadSlotItem().itemID == 0)
-        {
-            animalInformation = habitat1AnimalInfo;
-        } else
-        {
-            animalInformation = habitat2AnimalInfo;
-        }
+    void Start()
+    {
         animalInformation.SetActive(false);
 
     }

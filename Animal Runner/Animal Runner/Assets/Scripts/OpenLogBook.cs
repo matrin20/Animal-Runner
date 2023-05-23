@@ -15,6 +15,11 @@ public class OpenLogBook : MonoBehaviour
     private List<Image> logBookAnimalImages;
 
     [SerializeField]
+    private List<TextMeshProUGUI> mesopelagicAnimalCounts;
+    [SerializeField]
+    private List<Image> mesoLogBookAnimalImages;
+
+    [SerializeField]
     private List<Collider2D> allColliders;
 
     [SerializeField]
@@ -66,6 +71,16 @@ public class OpenLogBook : MonoBehaviour
             epipelagicAnimalCounts[i].text = _playerData.GetAnimalCount(i + 1) + "";
         }
 
+        for (int j=10; j<mesopelagicAnimalCounts.Count + 10; j++)
+        {
+            if (_playerData.GetAnimalCount(j + 1) > 0)
+            {
+                mesoLogBookAnimalImages[j - 10].sprite = _playerData.GetAllAnimals()[j].myGameObject.GetComponent<SpriteRenderer>().sprite;
+
+            }
+            mesopelagicAnimalCounts[j - 10].text = _playerData.GetAnimalCount(j + 1) + "";
+
+        }
     }
 
     private void CloseOtherTabs()

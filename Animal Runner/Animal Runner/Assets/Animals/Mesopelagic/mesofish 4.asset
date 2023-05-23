@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
-  m_Name: Brachy Fish
+  m_Name: mesofish 4
   m_EditorClassIdentifier: 
-  myID: 7
-  myName: Brachy Fish
+  myID: 14
+  myName: Deep Goby
   myHabitat: Mesopelagic
-  myCode: H4C8
-  myDropRate: 70
-  myGameObject: {fileID: 1833425554024125382, guid: ab0901da2ea523f40b6c18ca297fb202, type: 3}
-  myRarity: Uncommon
+  myCode: Y9Q1
+  myDropRate: 100
+  myGameObject: {fileID: 4593295952722844838, guid: e14e99dce28028e4886b8d6bceb0701e, type: 3}
+  myRarity: Common

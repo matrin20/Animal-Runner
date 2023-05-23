@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
+  m_Name: mesofish 6
+  m_EditorClassIdentifier: 
+  myID: 16
+  myName: Dark Betta
+  myHabitat: Mesopelagic
+  myCode: R8B3
+  myDropRate: 70
+  myGameObject: {fileID: 7576095552945372398, guid: f94ffd3ec81f5624e8ded97ff8eb43e0, type: 3}
+  myRarity: Uncommon

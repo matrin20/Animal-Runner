@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e44518a8f6aff40adc8b38d1f24735, type: 3}
-  m_Name: Crimson Fish
+  m_Name: mesofish 2
   m_EditorClassIdentifier: 
-  myID: 6
-  myName: Crimson Fish
+  myID: 12
+  myName: Gulper Fish
   myHabitat: Mesopelagic
-  myCode: J7R9
-  myDropRate: 80
-  myGameObject: {fileID: 6883473008385259947, guid: 55919e8de1237f743848ca5ae7aa2bc5, type: 3}
-  myRarity: Uncommon
+  myCode: X5M9
+  myDropRate: 100
+  myGameObject: {fileID: 1333547256920489461, guid: 0c86e1101f06ec6459db047ca414724d, type: 3}
+  myRarity: Common

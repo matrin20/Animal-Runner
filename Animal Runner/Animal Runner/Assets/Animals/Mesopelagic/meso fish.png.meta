@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a38563a4da2922643949d038a88efffe
+guid: 993e16990e65cce4fb1eee736103988b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fish wip_0
+      name: meso fish_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 373
-        width: 274
-        height: 141
+        x: 16
+        y: 775
+        width: 403
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f537c77b04899649b382d93b5108362
-      internalID: -1295228598
+      spriteID: df158022e88544140af9f0fc67b1494b
+      internalID: 1324680377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish wip_1
+      name: meso fish_1
       rect:
         serializedVersion: 2
-        x: 418
-        y: 381
-        width: 232
-        height: 140
+        x: 450
+        y: 803
+        width: 329
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66336a9053bf1df49b83dacff30ae40e
-      internalID: -654591727
+      spriteID: c4c7f4b59bf410341b0748b8270eed2e
+      internalID: 853258914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish wip_2
+      name: meso fish_2
       rect:
         serializedVersion: 2
-        x: 765
-        y: 375
-        width: 198
-        height: 155
+        x: 819
+        y: 857
+        width: 420
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca0108d095d70964c857b1a9c9df112e
-      internalID: -1582545195
+      spriteID: e5f2aa6244c889e4d8b2543fa0c36769
+      internalID: 1453185441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish wip_3
+      name: meso fish_3
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 355
-        width: 222
-        height: 159
+        x: 1257
+        y: 869
+        width: 388
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f7aea4700d7b894a89fc75a22b99874
-      internalID: -263587952
+      spriteID: c42408c3ee11dc744acbd6ae89e2f5e1
+      internalID: -906754866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish wip_4
+      name: meso fish_4
       rect:
         serializedVersion: 2
-        x: 50
-        y: 71
-        width: 252
-        height: 210
+        x: 49
+        y: 521
+        width: 426
+        height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fc245f74263647428506df5b1f6c120
-      internalID: -1802136202
+      spriteID: 8d949643baaf1104c89b5cbf9034c286
+      internalID: 1156121718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish wip_5
+      name: meso fish_5
       rect:
         serializedVersion: 2
-        x: 375
-        y: 106
-        width: 278
-        height: 106
+        x: 490
+        y: 484
+        width: 455
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43aa29fc56ffa0944b7e31c945f3f613
-      internalID: 2145199729
+      spriteID: 9a3b780bbe5c0a54d9c5575a475f56de
+      internalID: -715193653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish wip_6
+      name: meso fish_6
       rect:
         serializedVersion: 2
-        x: 702
-        y: 111
-        width: 246
-        height: 71
+        x: 986
+        y: 494
+        width: 287
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bef7e116a9de10747b91d91f895bc4e4
-      internalID: 1085664534
+      spriteID: e674b62f419e0c14a8d2cc28435abe0a
+      internalID: 1541637604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish wip_7
+      name: meso fish_7
       rect:
         serializedVersion: 2
-        x: 1021
-        y: 88
-        width: 308
-        height: 111
+        x: 1325
+        y: 506
+        width: 406
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +266,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a7cd0bff5dc916459b7e1b1bc0c2828
-      internalID: 2089786341
+      spriteID: d8b0c55fb6cdc084e8bd903dacfe41da
+      internalID: 708951950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meso fish_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 113
+        width: 557
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5583043532d9db746825d670b2770be7
+      internalID: -696397705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meso fish_9
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 137
+        width: 394
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9552740da6d23a4d9af1b08e61c4cc8
+      internalID: -2092983708
       vertices: []
       indices: 
       edges: []
@@ -283,14 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fish wip_1: -654591727
-      fish wip_7: 2089786341
-      fish wip_5: 2145199729
-      fish wip_4: -1802136202
-      fish wip_6: 1085664534
-      fish wip_3: -263587952
-      fish wip_0: -1295228598
-      fish wip_2: -1582545195
+      meso fish_7: 708951950
+      meso fish_8: -696397705
+      meso fish_0: 1324680377
+      meso fish_6: 1541637604
+      meso fish_9: -2092983708
+      meso fish_1: 853258914
+      meso fish_3: -906754866
+      meso fish_4: 1156121718
+      meso fish_5: -715193653
+      meso fish_2: 1453185441
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

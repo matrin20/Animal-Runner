@@ -81,6 +81,9 @@ public class RunManager : MonoBehaviour
         currentMission = _playerData.GetMissionRun();
         baseTime = _playerData.GetBaseRunTime();
         _equippedHeadSlot = _playerData.GetHeadSlotItem();
+
+        SetTimeAdjustment();
+
         endScreen.SetActive(false);
         timeRemaining = CalculateRunTime();
         timerProgressing = true;
@@ -96,25 +99,36 @@ public class RunManager : MonoBehaviour
     {
         if (timerProgressing == true)
         {
-            GameTimer();
             UpdateTimer();
             AwardOceanRun();
+            GameTimer();
         }
     }
 
-    public void SetTimeAdjustment(float itemEffect)
+    private void SetTimeAdjustment()
     {
-        timeAdjustment += itemEffect;
+        timeAdjustment = 0;
+
+        if (_playerData.GetFlipperSlot().itemID == 3)
+        {
+            timeAdjustment = 0;
+        } else if (_playerData.GetFlipperSlot().itemID == 4)
+        {
+            timeAdjustment = _playerData.GetBaseRunTime() / 10 * 2;
+        } else if (_playerData.GetFlipperSlot().itemID == 5)
+        {
+            timeAdjustment = _playerData.GetBaseRunTime() / 10 * 3;
+        }
     }
 
     private float CalculateRunTime()
     {
         if (isMissionRun)
         {
-            return currentMission.GetMissionRunTime() + timeAdjustment;
+            return currentMission.GetMissionRunTime() - timeAdjustment;
         } else
         {
-            return baseTime + timeAdjustment;
+            return baseTime - timeAdjustment;
         }
     }
 
@@ -151,11 +165,17 @@ public class RunManager : MonoBehaviour
             _playerData.AddAnimal(foundAnimal);
             _playerData.SetAnimalCount(foundAnimal);
             foundAnimalGUI.sprite = foundAnimal.myGameObject.GetComponent<SpriteRenderer>().sprite;
-            timePassedField.text = "Time passed: " + CalculateRunTime() + " seconds";
-            currencyEarnedField.text = "Currency earned: " + currencyReward;
+
             foundAnimalNameField.text = "Name: " + foundAnimal.myName;
             foundAnimalRarityField.text = "Rarity: " + foundAnimal.myRarity;
         }
+        int passedTime = Mathf.FloorToInt( CalculateRunTime() - timeRemaining);
+
+        timePassedField.text = "Time passed: " + passedTime + " seconds";
+        currencyEarnedField.text = "Currency earned: " + currencyReward;
+
+
+        _playerData.ChangeCurrency(currencyReward);
 
         DisableParallaxMovement();
 
@@ -202,7 +222,6 @@ public class RunManager : MonoBehaviour
             currencyReward += Mathf.FloorToInt(baseReward + timedReward);
             //this will throw an exception if the player did not start on menu select due to the DontDestroyOnLoad object being created there
             rewardText.text = "Currency: " + currencyReward;
-            _playerData.ChangeCurrency(currencyReward);
         }
 
     }

@@ -42,6 +42,12 @@ public class AddAnimalCode : MonoBehaviour
                 //do something
                 Debug.Log("String matches");
                 _playerData.AddAnimal(_allAnimals[i]);
+
+                if (_playerData.GetAnimalCount(_allAnimals[i].myID) == 0)
+                {
+                    _playerData.SetAnimalCount(_allAnimals[i]);
+                }
+
                 SceneManager.LoadScene(scenePicker.GetSceneName());
             }
         }

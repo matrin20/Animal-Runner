@@ -208,7 +208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.45
+  m_fontSize: 20.4
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 0}
+  myFish: {fileID: 11400000, guid: c376af2943cbb814798695ebadb819e1, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 0}
+  myFish: {fileID: 11400000, guid: 8f81d7a267b40284288c3520e8e1325c, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -3624,7 +3624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 11400000, guid: fec25146613a8294d8cd0221b5ca80be, type: 2}
+  myFish: {fileID: 11400000, guid: 2304bce4ccfbaae4dac64025ff356d12, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -3726,7 +3726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4124,7 +4124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.63500005, y: 0.215}
   m_AnchorMax: {x: 0.68500006, y: 0.45249268}
-  m_AnchoredPosition: {x: 0.6000061, y: -0.80000305}
+  m_AnchoredPosition: {x: 0.6000061, y: -0.79999924}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329711572
@@ -4543,7 +4543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.63500005, y: 0.215}
   m_AnchorMax: {x: 0.68500006, y: 0.45249268}
-  m_AnchoredPosition: {x: 0.6000061, y: -0.7999878}
+  m_AnchoredPosition: {x: 0.6000061, y: -0.79998016}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386066536
@@ -4777,7 +4777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5375,7 +5375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 0}
+  myFish: {fileID: 11400000, guid: 4b306fe746efda344a992ae2632ec1ab, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -6422,7 +6422,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.4
+  m_fontSize: 27.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7009,7 +7009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 11400000, guid: 7fee5410b5e3d8f44be5dfdd6fca03fc, type: 2}
+  myFish: {fileID: 11400000, guid: 6ac682936c2837741864491fd98f4c95, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -7140,7 +7140,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.75
+  m_fontSize: 20.25
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8882,7 +8882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 0}
+  myFish: {fileID: 11400000, guid: d4f3ce2947d61c94cbbedeaea2620331, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -9566,6 +9566,28 @@ MonoBehaviour:
   - {fileID: 731943878}
   - {fileID: 676356554}
   - {fileID: 635449111}
+  mesopelagicAnimalCounts:
+  - {fileID: 583994164}
+  - {fileID: 480609074}
+  - {fileID: 2113911756}
+  - {fileID: 809950231}
+  - {fileID: 969455507}
+  - {fileID: 432819862}
+  - {fileID: 325105061}
+  - {fileID: 421563883}
+  - {fileID: 290378302}
+  - {fileID: 1317173434}
+  mesoLogBookAnimalImages:
+  - {fileID: 308990132}
+  - {fileID: 586073426}
+  - {fileID: 436552213}
+  - {fileID: 24637518}
+  - {fileID: 1267041059}
+  - {fileID: 789824129}
+  - {fileID: 77513775}
+  - {fileID: 1960334906}
+  - {fileID: 1153067650}
+  - {fileID: 712572346}
   allColliders:
   - {fileID: 475270402}
   - {fileID: 312756626}
@@ -9733,7 +9755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 11400000, guid: 953126901a013ba42af411b0a1ef4abd, type: 2}
+  myFish: {fileID: 11400000, guid: 25abf438cfc84f042b035542db37105d, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -9812,7 +9834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.314, y: 0.215}
   m_AnchorMax: {x: 0.36400002, y: 0.45249268}
-  m_AnchoredPosition: {x: -0.40000916, y: -0.79999924}
+  m_AnchoredPosition: {x: -0.40000916, y: -0.80000305}
   m_SizeDelta: {x: 74, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795848147
@@ -9888,7 +9910,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.314, y: 0.215}
   m_AnchorMax: {x: 0.36400002, y: 0.45249268}
-  m_AnchoredPosition: {x: -0.40000916, y: -0.7999878}
+  m_AnchoredPosition: {x: -0.40000916, y: -0.79998016}
   m_SizeDelta: {x: 74, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801824755
@@ -10522,7 +10544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.314, y: 0.215}
   m_AnchorMax: {x: 0.36400002, y: 0.45249268}
-  m_AnchoredPosition: {x: -0.40000916, y: -0.80000305}
+  m_AnchoredPosition: {x: -0.40000916, y: -0.79999924}
   m_SizeDelta: {x: 74, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905673533
@@ -11637,7 +11659,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.15
+  m_fontSize: 19.2
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12466,7 +12488,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.3
+  m_fontSize: 24.65
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13048,7 +13070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 11400000, guid: 4c5c8ecf2e42a3c489ea5ab21244e3d0, type: 2}
+  myFish: {fileID: 11400000, guid: 8f842ca6ef796984cbf3a2d9bb637b57, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -13255,7 +13277,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.6
+  m_fontSize: 19.65
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13363,7 +13385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13736,7 +13758,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.3
+  m_fontSize: 27.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14102,7 +14124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 11400000, guid: 7d59cf46c6c86dd43a2283baa77d20c7, type: 2}
+  myFish: {fileID: 11400000, guid: 980b270b08b77b4459e0b5ac8d7b7cfe, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -15029,7 +15051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15164,7 +15186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15353,7 +15375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.63500005, y: 0.215}
   m_AnchorMax: {x: 0.68500006, y: 0.45249268}
-  m_AnchoredPosition: {x: 0.6000061, y: -0.79999924}
+  m_AnchoredPosition: {x: 0.6000061, y: -0.80000305}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411888030
@@ -15452,7 +15474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17597,7 +17619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.238, y: 0.04520755}
   m_AnchorMax: {x: 0.7803078, y: 0.966}
-  m_AnchoredPosition: {x: -0.40368652, y: -0.8475952}
+  m_AnchoredPosition: {x: -0.403656, y: -0.8475952}
   m_SizeDelta: {x: -0.047607422, y: -3.200901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710251347
@@ -17772,7 +17794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18418,7 +18440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21efefbd732ca74b8c358f873b7b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFish: {fileID: 0}
+  myFish: {fileID: 11400000, guid: adbb32b181369f3458ef387e7bd5e16f, type: 2}
   bigLogBookSprite: {fileID: 1014093371}
   nameField: {fileID: 1107071226}
   habitatField: {fileID: 2142870601}
@@ -19030,7 +19052,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.35
+  m_fontSize: 27.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19121,15 +19143,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2b4029d2d16aad140aab4e7dbb3949f0, type: 2}
   - {fileID: 11400000, guid: 1b664c7dd0877344bbc4ebc391c2bab4, type: 2}
   - {fileID: 11400000, guid: 0fbc471022fdf58479fa80df67996dbe, type: 2}
-  - {fileID: 11400000, guid: 953126901a013ba42af411b0a1ef4abd, type: 2}
-  - {fileID: 11400000, guid: 7d59cf46c6c86dd43a2283baa77d20c7, type: 2}
-  - {fileID: 11400000, guid: fec25146613a8294d8cd0221b5ca80be, type: 2}
-  - {fileID: 11400000, guid: 4c5c8ecf2e42a3c489ea5ab21244e3d0, type: 2}
+  - {fileID: 11400000, guid: 2304bce4ccfbaae4dac64025ff356d12, type: 2}
+  - {fileID: 11400000, guid: 6ac682936c2837741864491fd98f4c95, type: 2}
+  - {fileID: 11400000, guid: 4b306fe746efda344a992ae2632ec1ab, type: 2}
+  - {fileID: 11400000, guid: c376af2943cbb814798695ebadb819e1, type: 2}
+  - {fileID: 11400000, guid: 980b270b08b77b4459e0b5ac8d7b7cfe, type: 2}
+  - {fileID: 11400000, guid: 25abf438cfc84f042b035542db37105d, type: 2}
+  - {fileID: 11400000, guid: 8f81d7a267b40284288c3520e8e1325c, type: 2}
+  - {fileID: 11400000, guid: adbb32b181369f3458ef387e7bd5e16f, type: 2}
+  - {fileID: 11400000, guid: 8f842ca6ef796984cbf3a2d9bb637b57, type: 2}
+  - {fileID: 11400000, guid: d4f3ce2947d61c94cbbedeaea2620331, type: 2}
   headSlotItems:
   - {fileID: 11400000, guid: 342ca7117664db84ead0b0ea87b11722, type: 2}
   - {fileID: 11400000, guid: 8d88409857c64074dbb51da12e3edeff, type: 2}
   - {fileID: 11400000, guid: d371d3f58fbdf0b448d699470027975a, type: 2}
-  baseRunTime: 60
+  flipperSlotItems:
+  - {fileID: 11400000, guid: b13bbc66067f5444dad8bcbd957f4144, type: 2}
+  - {fileID: 11400000, guid: 84fbfaa3646149249a86f6d79c8088f2, type: 2}
+  - {fileID: 11400000, guid: 5214db6e804d43344a20f512a79955f5, type: 2}
+  baseRunTime: 10
 --- !u!4 &1997382402
 Transform:
   m_ObjectHideFlags: 0
@@ -20321,7 +20353,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.05
+  m_fontSize: 19.05
   m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -20458,7 +20490,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.3
+  m_fontSize: 22.75
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -20701,7 +20733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

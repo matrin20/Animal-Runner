@@ -18,6 +18,10 @@ public class PlayerData : MonoBehaviour
     private Item equippedHeadSlotItem;
 
     [SerializeField]
+    private List<Item> flipperSlotItems;
+    private Item equippedFlipperSlot;
+
+    [SerializeField]
     private int baseRunTime;
 
     private int shopLevel;
@@ -297,5 +301,31 @@ public class PlayerData : MonoBehaviour
         }
 
     }
-    //next
+
+
+
+    //flipper slot
+    public void SetFlipperSlot(Item item)
+    {
+        Debug.Log("Set flipper slot to: " + item.itemName);
+
+        PlayerPrefs.SetInt("EquippedFlipperID", item.itemID);
+
+    }
+
+    public Item GetFlipperSlot()
+    {
+        equippedFlipperSlot = flipperSlotItems[0];
+
+        for (int i=0; i<flipperSlotItems.Count; i++)
+        {
+            if (flipperSlotItems[i].itemID == PlayerPrefs.GetInt("EquippedFlipperID"))
+            {
+                equippedFlipperSlot = flipperSlotItems[i];
+            }
+        }
+
+        return equippedFlipperSlot;
+    }
+
 }
