@@ -32,6 +32,9 @@ public class GenerateMission : MonoBehaviour
     [SerializeField]
     private PopulateMissionData populator;
 
+    private float saveTimerInterval = 3;
+    private float secondsPassedSinceSave = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +59,8 @@ public class GenerateMission : MonoBehaviour
             currentMissions = _playerData.GetMissions();
         }
 
+        secondsPassed = _playerData.GetNewMissionTimer();
+
     }
 
     // Update is called once per frame
@@ -78,6 +83,15 @@ public class GenerateMission : MonoBehaviour
         else
         {
             secondsPassed += Time.deltaTime;
+        }
+
+        if (secondsPassedSinceSave > saveTimerInterval)
+        {
+            secondsPassedSinceSave = 0;
+            _playerData.SetNewMissionTimer(secondsPassed);
+        } else
+        {
+            secondsPassedSinceSave += Time.deltaTime;
         }
     }
 

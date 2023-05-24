@@ -3816,7 +3816,6 @@ GameObject:
   - component: {fileID: 312756626}
   - component: {fileID: 312756627}
   - component: {fileID: 312756628}
-  - component: {fileID: 312756629}
   m_Layer: 0
   m_Name: map select jungle
   m_TagString: Untagged
@@ -3865,7 +3864,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f784b8e1243c2e946b0e40a5982d9a10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ead1afaf33c33f54c9db0b1fd4552b17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3884,7 +3883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312756623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0019999743, y: -3.062, z: 0}
+  m_LocalPosition: {x: 0.04, y: -3.144, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3908,7 +3907,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.04, y: 4.69}
+    oldSize: {x: 19.04, y: 4.5}
     newSize: {x: 19.04, y: 4.69}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3942,18 +3941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Jungle Biome
---- !u!114 &312756629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312756623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6723e09d85c4d44819b3be9f7b93c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &325105059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,7 +4165,6 @@ GameObject:
   - component: {fileID: 360313213}
   - component: {fileID: 360313214}
   - component: {fileID: 360313215}
-  - component: {fileID: 360313216}
   m_Layer: 0
   m_Name: map select mountains
   m_TagString: Untagged
@@ -4227,7 +4213,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3b25dada724b8bc4b9c2bf4957c7d50a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4b655bd9a1ee46409f507e051fb6c1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4246,7 +4232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360313210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5200005, y: -0.010000348, z: 0}
+  m_LocalPosition: {x: 4.57, y: 0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4270,7 +4256,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.13, y: 10.78}
+    oldSize: {x: 10.1, y: 10.78}
     newSize: {x: 10.13, y: 10.78}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4304,18 +4290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Mountain Biome
---- !u!114 &360313216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360313210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6723e09d85c4d44819b3be9f7b93c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &366095383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,7 +5557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606d5c586905b4046bafe4de520a4d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missionInterval: 6
+  missionInterval: 20
   missionDurationVariance: 15
   populator: {fileID: 993098065}
 --- !u!4 &447850194
@@ -5976,10 +5950,10 @@ GameObject:
   m_Component:
   - component: {fileID: 475270401}
   - component: {fileID: 475270400}
-  - component: {fileID: 475270402}
   - component: {fileID: 475270403}
   - component: {fileID: 475270404}
   - component: {fileID: 475270405}
+  - component: {fileID: 475270406}
   m_Layer: 0
   m_Name: map select ocean
   m_TagString: Untagged
@@ -6054,32 +6028,6 @@ Transform:
   m_Father: {fileID: 1866217555}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &475270402
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475270399}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.4866601, y: -1.684562}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.59954447, y: 0.82217675}
-    oldSize: {x: 9.14, y: 10.8}
-    newSize: {x: 9.14, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.10668, y: 5.267877}
-  m_EdgeRadius: 0
 --- !u!114 &475270403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6118,6 +6066,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionGO: {fileID: 533260084}
+--- !u!60 &475270406
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475270399}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.59954447, y: 0.82217675}
+    oldSize: {x: 9.14, y: 10.8}
+    newSize: {x: 9.14, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -4.9098363, y: -8.579509}
+      - {x: -4.819836, y: -8.529509}
+      - {x: -4.5798364, y: -8.389508}
+      - {x: -4.4398365, y: -8.309508}
+      - {x: -4.319836, y: -8.239509}
+      - {x: -3.9098363, y: -7.9995084}
+      - {x: -3.7698364, y: -7.9195085}
+      - {x: -3.1698363, y: -7.5695086}
+      - {x: -2.8798363, y: -7.3995085}
+      - {x: -2.7598364, y: -7.3295083}
+      - {x: -2.6198363, y: -7.2495084}
+      - {x: -1.6598364, y: -6.6895084}
+      - {x: -1.6098363, y: -6.6595087}
+      - {x: -1.5398364, y: -6.6195087}
+      - {x: -1.4898363, y: -6.5895085}
+      - {x: -1.3498363, y: -6.5095086}
+      - {x: -0.62983644, y: -6.0895085}
+      - {x: -0.45983642, y: -5.9895086}
+      - {x: -0.3198364, y: -5.9095087}
+      - {x: 0.76016355, y: -5.2795086}
+      - {x: 0.81016356, y: -5.2495084}
+      - {x: 0.95016354, y: -5.1695085}
+      - {x: 1.9101635, y: -4.6095085}
+      - {x: 1.9701636, y: -4.559509}
+      - {x: 1.9601635, y: -4.5195084}
+      - {x: 1.8901635, y: -4.3895087}
+      - {x: 1.8201635, y: -4.2295084}
+      - {x: 1.7701635, y: -4.0895085}
+      - {x: 1.7101636, y: -3.8495085}
+      - {x: 1.6901635, y: -3.7095087}
+      - {x: 1.6801635, y: -3.5995085}
+      - {x: 1.6701635, y: -3.5895085}
+      - {x: 1.6701635, y: -3.3595085}
+      - {x: 1.6801635, y: -3.3495085}
+      - {x: 1.7401636, y: -2.9695086}
+      - {x: 1.7801635, y: -2.8395085}
+      - {x: 1.8101635, y: -2.7495086}
+      - {x: 1.8501636, y: -2.6495087}
+      - {x: 1.9101635, y: -2.5195086}
+      - {x: 2.0901635, y: -2.2495086}
+      - {x: 2.1601636, y: -2.1495087}
+      - {x: 2.2801635, y: -2.0195086}
+      - {x: 2.4001634, y: -1.9095086}
+      - {x: 2.4401636, y: -1.8795086}
+      - {x: 2.6601634, y: -1.7195086}
+      - {x: 2.8101635, y: -1.6395086}
+      - {x: 2.8701634, y: -1.6095086}
+      - {x: 2.9701636, y: -1.5695087}
+      - {x: 3.1001635, y: -1.5195086}
+      - {x: 3.3301635, y: -1.4595087}
+      - {x: 3.5501635, y: -1.4295087}
+      - {x: 3.6601634, y: -1.4195086}
+      - {x: 3.6601634, y: 1.9204913}
+      - {x: -5.4798365, y: 1.9204913}
+      - {x: -5.4798365, y: -8.879508}
+      - {x: -5.4298363, y: -8.879508}
+      - {x: -5.3498363, y: -8.839508}
+      - {x: -5.109836, y: -8.699509}
 --- !u!1 &480609072
 GameObject:
   m_ObjectHideFlags: 0
@@ -9589,9 +9620,7 @@ MonoBehaviour:
   - {fileID: 1153067650}
   - {fileID: 712572346}
   allColliders:
-  - {fileID: 475270402}
-  - {fileID: 312756626}
-  - {fileID: 360313213}
+  - {fileID: 475270406}
   - {fileID: 430228811}
   - {fileID: 1569210307}
   - {fileID: 780268911}
@@ -11130,9 +11159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionsTab: {fileID: 1710251345}
   collidersToDisable:
-  - {fileID: 475270402}
-  - {fileID: 312756626}
-  - {fileID: 360313213}
+  - {fileID: 475270406}
   - {fileID: 430228811}
 --- !u!114 &993098065
 MonoBehaviour:

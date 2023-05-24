@@ -330,4 +330,14 @@ public class PlayerData : MonoBehaviour
         return equippedFlipperSlot;
     }
 
+    public void SetNewMissionTimer(float value)
+    {
+        PlayerPrefs.SetFloat("MissionTimer", value);
+    }
+
+    public float GetNewMissionTimer()
+    {
+        return PlayerPrefs.GetFloat("MissionTimer");
+    }
+
 }

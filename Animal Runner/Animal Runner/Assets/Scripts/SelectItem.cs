@@ -12,11 +12,12 @@ public class SelectItem : MonoBehaviour
     private Item item;
     private PlayerData _playerData;
     // Start is called before the first frame update
-
+    private EquippedCharacterManager EquippedCharacterManager;
 
     void Start()
     {
         _playerData = GameObject.Find("PlayerDataDDOL").GetComponent<PlayerData>();
+        EquippedCharacterManager = GameObject.Find("EquippedCharacterManager").GetComponent<EquippedCharacterManager>();
     }
 
     // Update is called once per frame
@@ -28,6 +29,9 @@ public class SelectItem : MonoBehaviour
     private void OnMouseDown()
     {
         SetItem();
+
+        EquippedCharacterManager.OnBreatherSelect();
+        EquippedCharacterManager.OnFlipperSelect();
     }
 
 

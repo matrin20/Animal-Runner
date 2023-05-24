@@ -45,15 +45,27 @@ public class ParallaxBiomeManager : MonoBehaviour
         CreateParallaxList();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     private void BiomeChecker()
     {
-        currentBiome = _playerData.GetHeadSlotItem().itemID;
+        if (_playerData.GetIsMissionRun())
+        {
+            if (_playerData.GetMissionRun().GetMissionAnimal().myHabitat == "Epipelagic")
+            {
+                currentBiome = 0;
+            } else if (_playerData.GetMissionRun().GetMissionAnimal().myHabitat == "Mesopelagic")
+            {
+                currentBiome = 1;
+            } else
+            {
+                currentBiome = 2;
+            }
+        } else
+        {
+            currentBiome = _playerData.GetHeadSlotItem().itemID;
+        }
+
 
         for (int i=0; i<allParallaxObjects[currentBiome].Count; i++)
         {
