@@ -29,6 +29,10 @@ public class IdleAnimalMovement : MonoBehaviour
     [SerializeField]
     private Animal animalReference;
 
+    private float turnCooldown = 0.5f;
+    private float timeSinceYTurn;
+    private float timeSinceXTurn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,11 +73,17 @@ public class IdleAnimalMovement : MonoBehaviour
 
     private void TurnAroundTimer()
     {
+        timeSinceXTurn += Time.deltaTime;
+
         if (transform.position.x < leftBound.transform.position.x || transform.position.x > rightBound.transform.position.x)
         {
-            turnMultiplier = -1;
-            turnMultiplier *= transform.localScale.x;
-            transform.localScale = new Vector2(turnMultiplier, transform.localScale.y);
+            if (timeSinceXTurn > turnCooldown)
+            {
+                timeSinceXTurn = 0;
+                turnMultiplier = -1;
+                turnMultiplier *= transform.localScale.x;
+                transform.localScale = new Vector2(turnMultiplier, transform.localScale.y);
+            }
         }
 
         if (timer > 0)
@@ -84,25 +94,37 @@ public class IdleAnimalMovement : MonoBehaviour
         {
             timer = turnInterval;
             //do something
-            randomNumber = Random.Range(0, 2);
-            if (randomNumber == 0)
-            {
-                turnMultiplier = -1;
-            } else
-            {
-                turnMultiplier = 1;
-            }
 
-            turnMultiplier *= transform.localScale.x;
-            transform.localScale = new Vector2 (turnMultiplier, transform.localScale.y);
+            if (timeSinceXTurn>turnCooldown)
+            {
+                randomNumber = Random.Range(0, 2);
+                if (randomNumber == 0)
+                {
+                    turnMultiplier = -1;
+                }
+                else
+                {
+                    turnMultiplier = 1;
+                }
+
+                turnMultiplier *= transform.localScale.x;
+                transform.localScale = new Vector2(turnMultiplier, transform.localScale.y);
+            }
+            
         }
     }
 
     private void fishMovement()
     {
+        timeSinceYTurn += Time.deltaTime;
+
         if (transform.position.y > topYBound.transform.position.y || transform.position.y < bottomYBound.transform.position.y)
         {
-            verticleMultiplier *= -1;
+            if (timeSinceYTurn > turnCooldown)
+            {
+                verticleMultiplier *= -1;
+                timeSinceYTurn = 0;
+            }
         }
 
         xStep = xMovementSpeed * randomMovementNumber * Time.deltaTime;
@@ -110,7 +132,9 @@ public class IdleAnimalMovement : MonoBehaviour
 
         if (turnMultiplier < 0)
         {
+            
             xStep *= -1;
+            
         }
         
         transform.position = new Vector2(transform.position.x + xStep, transform.position.y + yStep);

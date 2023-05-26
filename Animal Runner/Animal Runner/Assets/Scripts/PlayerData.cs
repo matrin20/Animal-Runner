@@ -33,9 +33,23 @@ public class PlayerData : MonoBehaviour
     private bool isMissionRun = false;
     private Mission currentMission;
 
+    public static List<GameObject> playerDataExistsList;
+
     private void Awake()
     {
+
+        if (playerDataExistsList == null)
+        {
+            playerDataExistsList = new List<GameObject>();
+            playerDataExistsList.Add(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         DontDestroyOnLoad(gameObject);
+
     }
 
     // Start is called before the first frame update
@@ -138,7 +152,7 @@ public class PlayerData : MonoBehaviour
 
     public void ClearPlayerPrefs()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Semicolon))
         {
             PlayerPrefs.DeleteAll();
         }
@@ -338,6 +352,26 @@ public class PlayerData : MonoBehaviour
     public float GetNewMissionTimer()
     {
         return PlayerPrefs.GetFloat("MissionTimer");
+    }
+
+    public void IncreaseNumberOfMissionsToMake()
+    {
+        int newValue = PlayerPrefs.GetInt("NumberOfMissionsToMake") + 1;
+        if (newValue < 4)
+        {
+            PlayerPrefs.SetInt("NumberOfMissionsToMake", newValue);
+        }
+    }
+
+    public int GetNumberOfMissionsToMake()
+    {
+        return PlayerPrefs.GetInt("NumberOfMissionsToMake");
+    }
+
+    public void DecreaseNumberOfMissionsToMake()
+    {
+        int newValue = PlayerPrefs.GetInt("NumberOfMissionsToMake") - 1;
+        PlayerPrefs.SetInt("NumberOfMissionsToMake", newValue);
     }
 
 }

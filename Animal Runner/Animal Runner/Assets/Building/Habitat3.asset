@@ -15,4 +15,4 @@ MonoBehaviour:
   buildingPrefab: {fileID: 97082262206151598, guid: f1be5f300908cd94eb5d67aa26f8cc70, type: 3}
   buildingName: Habitat3
   buildingLevel: 3
-  buildingCost: 3
+  buildingCost: 3000

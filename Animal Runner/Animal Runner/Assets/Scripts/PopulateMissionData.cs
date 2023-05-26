@@ -225,6 +225,8 @@ public class PopulateMissionData : MonoBehaviour
             missionHolderList[j].RemoveMyMission();
             missionButtons[j].enabled = false;
             deleteButtons[j].enabled = false;
+
+            missionHolderList[j].DeactivateIcons();
         }
 
         if (_currentMissions.Count > 0)
@@ -239,6 +241,8 @@ public class PopulateMissionData : MonoBehaviour
                 missionHolderList[i].SetMyMission(_currentMissions[i]);
                 missionButtons[i].enabled = true;
                 deleteButtons[i].enabled = true;
+
+                missionHolderList[i].ActivateIcons();
             }
         }
     }

@@ -60,40 +60,42 @@ public class GenerateMission : MonoBehaviour
         }
 
         secondsPassed = _playerData.GetNewMissionTimer();
+        int loopLength = _playerData.GetNumberOfMissionsToMake();
+        for (int i = 0; i < loopLength; i++)
+        {
+            _playerData.DecreaseNumberOfMissionsToMake();
+            GlobalMissionIncrease();
+        }
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        ProgressTimer();
+        //ProgressTimer();
     }
 
-    private void ProgressTimer()
-    {
-        if (secondsPassed > missionInterval)
-        {
-            secondsPassed = 0;
-            if (populator.GetNumberOfMissions() < 3)
-            {
-                CreateMission();
-                populator.IncreaseCurrentNumberOfMissions();
-            }
-        }
-        else
-        {
-            secondsPassed += Time.deltaTime;
-        }
+    //private void ProgressTimer()
+    //{
+    //    if (secondsPassed > missionInterval)
+    //    {
+    //        secondsPassed = 0;
+    //        GlobalMissionIncrease();
+    //    }
+    //    else
+    //    {
+    //        secondsPassed += Time.deltaTime;
+    //    }
 
-        if (secondsPassedSinceSave > saveTimerInterval)
-        {
-            secondsPassedSinceSave = 0;
-            _playerData.SetNewMissionTimer(secondsPassed);
-        } else
-        {
-            secondsPassedSinceSave += Time.deltaTime;
-        }
-    }
+    //    if (secondsPassedSinceSave > saveTimerInterval)
+    //    {
+    //        secondsPassedSinceSave = 0;
+    //        _playerData.SetNewMissionTimer(secondsPassed);
+    //    } else
+    //    {
+    //        secondsPassedSinceSave += Time.deltaTime;
+    //    }
+    //}
 
 
 
@@ -145,5 +147,12 @@ public class GenerateMission : MonoBehaviour
         _playerData.AddMission(new Mission(animalReward, missionDuration, difficultyModifier, missionIndex));
     }
 
-
+    public void GlobalMissionIncrease()
+    {
+        if (populator.GetNumberOfMissions() < 3)
+        {
+            CreateMission();
+            populator.IncreaseCurrentNumberOfMissions();
+        }
+    }
 }
