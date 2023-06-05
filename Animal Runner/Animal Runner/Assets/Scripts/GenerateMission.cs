@@ -69,35 +69,6 @@ public class GenerateMission : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //ProgressTimer();
-    }
-
-    //private void ProgressTimer()
-    //{
-    //    if (secondsPassed > missionInterval)
-    //    {
-    //        secondsPassed = 0;
-    //        GlobalMissionIncrease();
-    //    }
-    //    else
-    //    {
-    //        secondsPassed += Time.deltaTime;
-    //    }
-
-    //    if (secondsPassedSinceSave > saveTimerInterval)
-    //    {
-    //        secondsPassedSinceSave = 0;
-    //        _playerData.SetNewMissionTimer(secondsPassed);
-    //    } else
-    //    {
-    //        secondsPassedSinceSave += Time.deltaTime;
-    //    }
-    //}
-
-
 
     private void SortAnimalsIntoHabitat()
     {

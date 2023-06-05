@@ -39,7 +39,6 @@ public class AddAnimalCode : MonoBehaviour
         {
             if (_allAnimals[i].myCode == actualText)
             {
-                //do something
                 Debug.Log("String matches");
                 _playerData.AddAnimal(_allAnimals[i]);
 

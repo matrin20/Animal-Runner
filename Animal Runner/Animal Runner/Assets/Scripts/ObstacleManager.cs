@@ -62,8 +62,6 @@ public class ObstacleManager : MonoBehaviour
 
         SpeedModifierCalculation();
         speedIncrement -= speedIncrementModifier;
-        Debug.Log(speedIncrement);
-
 
         Obstacles = new List<GameObject>();
         distanceUntilNextSpawn = 19.20f;

@@ -19,7 +19,6 @@ public class RunLoot : MonoBehaviour
 
     public Animal GetAnimalReward(int index)
     {
-        //(item effect) could add an argument that decreases the random number by x to increase the chances of hitting a rarer animal.
         int randomNumber = Random.Range(1, 101);
         List<Animal> validAnimals = new List<Animal>();
         foreach (Animal animal in lootLists[index])
@@ -30,7 +29,6 @@ public class RunLoot : MonoBehaviour
             }
         }
         int randomDrop = Random.Range(0, validAnimals.Count);
-        //Debug.Log(validAnimals[randomDrop]);
         return validAnimals[randomDrop];
     }
   

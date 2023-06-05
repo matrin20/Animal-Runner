@@ -79,7 +79,6 @@ public class ParallaxElements : MonoBehaviour
 
     private void IncreaseParallaxSpeed(float value)
     {
-        Debug.Log("check");
         foreGroundParallaxSpeed = foreGroundParallaxSpeed + value;
     }
 

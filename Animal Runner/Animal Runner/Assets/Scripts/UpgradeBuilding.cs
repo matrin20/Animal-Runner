@@ -92,8 +92,7 @@ public class UpgradeBuilding : MonoBehaviour
             _playerData.ChangeCurrency(habitatUpgradePrice * -1);
             currentHabitatLevel += 1;
             _playerData.SetHabitatLevel(currentHabitatLevel);
-            //Destroy(currentHabitatBuilding);
-            //currentHabitatBuilding = Instantiate(habitatBuildings[currentHabitatLevel - 1].buildingPrefab);
+
             if (currentHabitatLevel < 3)
             {
                 habitatUpgradePrice = habitatBuildings[currentHabitatLevel].buildingCost;

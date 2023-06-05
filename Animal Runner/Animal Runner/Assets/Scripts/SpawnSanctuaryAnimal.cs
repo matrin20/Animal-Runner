@@ -27,7 +27,7 @@ public class SpawnSanctuaryAnimal : MonoBehaviour
         foreach(Animal animal in spawnList)
         {
             Transform spawnPoint;
-            //adding a random x pos to spawnpoint within a range
+
             if (animal.myHabitat == "Epipelagic")
             {
                 spawnPoint = epiSpawnPoint;

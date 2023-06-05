@@ -156,7 +156,6 @@ public class RunManager : MonoBehaviour
             {
                 foundAnimal = currentMission.GetMissionAnimal();
                 _playerData.RemoveMissionFromList(_playerData.GetMissionRun().GetMissionIndex());
-                //to update the current mission listings (not ideal)
             } else
             {
                 foundAnimal = lootManager.GetAnimalReward(_equippedHeadSlot.itemID);
@@ -179,7 +178,7 @@ public class RunManager : MonoBehaviour
 
         DisableParallaxMovement();
 
-        //game states
+        //gameobject states
         endScreen.SetActive(true);
         _obstacleManager.SetGlobalObstacleSpeed(0f);
         _obstacleManager.enabled = false;

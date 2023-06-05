@@ -47,17 +47,14 @@ public class CharacterMovementOcean : MonoBehaviour
 
     }
 
-
     private void MoveCharacterYV2()
     {
         yPositionEasing = deltaY / easingFactor * movementSpeed * Time.deltaTime;
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yPositionEasing, gameObject.transform.position.z);
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("boem");
         _runManager.EndRun("Game Over");
     }
 }
