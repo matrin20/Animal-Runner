@@ -22,7 +22,6 @@ public class SetNameOnHover : MonoBehaviour
     public void SetUITextOnHover()
     {
         UIHoverText.text = myLinkName;
-        Debug.Log("hello");
     }
 
     public void ResetUIText()

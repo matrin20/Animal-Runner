@@ -23,6 +23,10 @@ public class UpgradeBuilding : MonoBehaviour
 
     [SerializeField]
     private GameObject upgradeButton;
+    [SerializeField]
+    private GameObject costIcon;
+    [SerializeField]
+    private GameObject insuffPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -44,12 +48,13 @@ public class UpgradeBuilding : MonoBehaviour
         if (currentHabitatLevel < 3)
         {
             habitatUpgradePrice = habitatBuildings[currentHabitatLevel].buildingCost;
-            habitatPriceField.text = "Upgrade Cost: " + habitatUpgradePrice;
+            habitatPriceField.text = "Cost: " + habitatUpgradePrice;
         }
         else
         {
             habitatPriceField.text = "Max Level";
             upgradeButton.SetActive(false);
+            costIcon.SetActive(false);
         }
         //currentHabitatBuilding = Instantiate(habitatBuildings[currentHabitatLevel - 1].buildingPrefab);
 
@@ -72,7 +77,7 @@ public class UpgradeBuilding : MonoBehaviour
             if (currentShopLevel < 3)
             {
                 shopUpgradePrice = shopBuildings[currentShopLevel].buildingCost;
-                shopPriceField.text = "Upgrade Cost: " + shopUpgradePrice;
+                shopPriceField.text = "Cost: " + shopUpgradePrice;
 
             } else
             {
@@ -96,18 +101,20 @@ public class UpgradeBuilding : MonoBehaviour
             if (currentHabitatLevel < 3)
             {
                 habitatUpgradePrice = habitatBuildings[currentHabitatLevel].buildingCost;
-                habitatPriceField.text = "Upgrade Cost: " + habitatUpgradePrice;
+                habitatPriceField.text = "Cost: " + habitatUpgradePrice;
 
             }
             else
             {
                 habitatPriceField.text = "Max Level";
                 upgradeButton.SetActive(false);
+                costIcon.SetActive(false);
             }
         }
         else if (_currency < habitatUpgradePrice)
         {
             Debug.Log("You don't have enough currency.");
+            insuffPanel.SetActive(true);
         }
 
         //update UI to buildingData.cost[buildingData.level[x]+1]

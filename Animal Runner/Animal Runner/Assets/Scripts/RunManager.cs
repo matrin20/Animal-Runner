@@ -44,8 +44,8 @@ public class RunManager : MonoBehaviour
     [SerializeField]
     private float rewardModifier;
     [SerializeField]
-    private TextMeshProUGUI rewardText;
-
+    private DisplayCurrency currencyDisplay;
+    private int intermediateReward;
     
     private Animal foundAnimal;
     [Header("End Screen objects")]
@@ -87,7 +87,7 @@ public class RunManager : MonoBehaviour
         endScreen.SetActive(false);
         timeRemaining = CalculateRunTime();
         timerProgressing = true;
-        rewardText.text = "Currency: 0";
+        //rewardText.text = "Currency: 0";
         ConfigureBiomeDepth();
 
 
@@ -174,7 +174,7 @@ public class RunManager : MonoBehaviour
         currencyEarnedField.text = "Currency earned: " + currencyReward;
 
 
-        _playerData.ChangeCurrency(currencyReward);
+        //_playerData.ChangeCurrency(currencyReward);
 
         DisableParallaxMovement();
 
@@ -218,9 +218,13 @@ public class RunManager : MonoBehaviour
             rewardTimer = 0;
             timedReward = CalculateRunTime() - timeRemaining;
             timedReward *= rewardModifier;
-            currencyReward += Mathf.FloorToInt(baseReward + timedReward);
+            intermediateReward = Mathf.FloorToInt(baseReward + timedReward);
+            _playerData.ChangeCurrency(intermediateReward);
+            //currencyReward is only used to show the sum of the reward at the endscreen
+            currencyReward += intermediateReward;
             //this will throw an exception if the player did not start on menu select due to the DontDestroyOnLoad object being created there
-            rewardText.text = "Currency: " + currencyReward;
+            //rewardText.text = "Currency: " + currencyReward;
+            currencyDisplay.SetDisplayCurrency();
         }
 
     }

@@ -15,6 +15,10 @@ public class UnlockItem : MonoBehaviour
     private TextMeshProUGUI costField;
     [SerializeField]
     private int myIndex;
+    [SerializeField]
+    private GameObject costIcon;
+    [SerializeField]
+    private GameObject insuffPanel;
 
     private void Start()
     {
@@ -34,6 +38,7 @@ public class UnlockItem : MonoBehaviour
         else
         {
             Debug.Log("You don't have enough currency!");
+            insuffPanel.SetActive(true);
         }
 
         GameObject.Find("Currency").GetComponent<DisplayCurrency>().SetDisplayCurrency();
@@ -44,5 +49,6 @@ public class UnlockItem : MonoBehaviour
         slotToUnlock.SetActive(true);
         costField.gameObject.SetActive(false);
         gameObject.SetActive(false);
+        costIcon.SetActive(false);
     }
 }

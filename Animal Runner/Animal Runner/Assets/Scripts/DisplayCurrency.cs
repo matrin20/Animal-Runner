@@ -20,7 +20,7 @@ public class DisplayCurrency : MonoBehaviour
 
     public void SetDisplayCurrency()
     {
-        currencyField.text = "Currency: " + _playerData.GetCurrency();
+        currencyField.text = _playerData.GetCurrency() + "";
     }
 
 }

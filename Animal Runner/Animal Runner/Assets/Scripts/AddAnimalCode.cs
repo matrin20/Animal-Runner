@@ -50,6 +50,12 @@ public class AddAnimalCode : MonoBehaviour
                 SceneManager.LoadScene(scenePicker.GetSceneName());
             }
         }
+
+        //debugging tool; cheat code to add gold
+        if (actualText == "gold")
+        {
+            _playerData.ChangeCurrency(5000);
+        }
     }
 
 }
