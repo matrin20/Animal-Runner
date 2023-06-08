@@ -22,6 +22,12 @@ public class CharacterMovementOcean : MonoBehaviour
 
     [SerializeField]
     private RunManager _runManager;
+
+    [SerializeField]
+    private GameObject collisionParticles;
+    [SerializeField]
+    private ParticleSystem trailParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +61,19 @@ public class CharacterMovementOcean : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        collisionParticles.transform.position = collision.ClosestPoint(gameObject.transform.position);
+        collisionParticles.GetComponent<ParticleSystem>().Play();
         _runManager.EndRun("Game Over");
     }
+
+    private void SetTrailParticlesSpeed(float value)
+    {
+        //trailParticles.velocity += value
+    }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    Debug.Log("checking for bonk");
+    //    collisionParticles.transform.position = collision.contacts[0].point;
+    //}
 }

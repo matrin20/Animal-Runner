@@ -73,6 +73,9 @@ public class RunManager : MonoBehaviour
     [SerializeField]
     private ParallaxBiomeManager _parallaxBiomeManager;
 
+    [SerializeField]
+    private ParticleSystem feetBubbles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -185,6 +188,7 @@ public class RunManager : MonoBehaviour
         _playerCharacter.enabled = false;
         timerProgressing = false;
         gameOverText.text = stringText;
+        feetBubbles.Stop();
     }
 
     public bool GetRunProgressing()
