@@ -28,6 +28,9 @@ public class ObstacleManager : MonoBehaviour
 
     private bool isMissionRun;
 
+    [SerializeField]
+    private ParticleSpeedIncrease trailParticleSystem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -120,6 +123,7 @@ public class ObstacleManager : MonoBehaviour
         {
             speedIncreaseTimer = 0;
             SetGlobalObstacleSpeed(obstacleSpeed + speedIncrement);
+            trailParticleSystem.SetTrailParticlesSpeed(speedIncrement);
         }
     }
 

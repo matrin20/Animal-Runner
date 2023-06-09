@@ -374,4 +374,26 @@ public class PlayerData : MonoBehaviour
         PlayerPrefs.SetInt("NumberOfMissionsToMake", newValue);
     }
 
+    public void SetAudioState(bool audioPlaying)
+    {
+        if (audioPlaying)
+        {
+            PlayerPrefs.SetInt("MuteAudio", 0);
+        } else
+        {
+            PlayerPrefs.SetInt("MuteAudio", 1);
+        }
+    }
+
+    public bool GetAudioState()
+    {
+        bool audioPlaying = true;
+        if (PlayerPrefs.GetInt("MuteAudio") == 1)
+        {
+            audioPlaying = false;
+        }
+
+        return audioPlaying;
+    }
+
 }

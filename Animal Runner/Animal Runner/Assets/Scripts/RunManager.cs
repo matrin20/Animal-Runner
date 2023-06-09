@@ -76,6 +76,7 @@ public class RunManager : MonoBehaviour
     [SerializeField]
     private ParticleSystem feetBubbles;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -203,11 +204,13 @@ public class RunManager : MonoBehaviour
 
     public void RestartRun()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().KeepMusicPlaying();
         SceneManager.LoadScene(gameObject.GetComponent<MenuSelectItem>().GetSceneName());
     }
 
     public void BackToMapSelect()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().DestroyAudioManager();
         _playerData.EndMissionRun();
         SceneManager.LoadScene("MenuScreen");
     }
