@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 160563332}
   - component: {fileID: 160563331}
   m_Layer: 5
-  m_Name: Habitat
+  m_Name: ReceivedHabitat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 233842297}
   - component: {fileID: 233842296}
   m_Layer: 5
-  m_Name: Animal
+  m_Name: ReceivedAnimal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2328,7 +2328,7 @@ GameObject:
   - component: {fileID: 880987427}
   - component: {fileID: 880987426}
   m_Layer: 5
-  m_Name: Rarity
+  m_Name: ReceivedRarity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3324,7 +3324,7 @@ GameObject:
   - component: {fileID: 1218765858}
   - component: {fileID: 1218765857}
   m_Layer: 5
-  m_Name: AnimalSprite
+  m_Name: ReceivedAnimalSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4938,10 +4938,10 @@ RectTransform:
   m_Father: {fileID: 1375390769}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.037, y: 0.31138903}
+  m_AnchorMin: {x: 0.037, y: 0.29983377}
   m_AnchorMax: {x: 0.9760001, y: 0.406611}
-  m_AnchoredPosition: {x: -0.2947998, y: -0.28095996}
-  m_SizeDelta: {x: 0.5326996, y: -0.5619199}
+  m_AnchoredPosition: {x: -0.2947998, y: -0.29249954}
+  m_SizeDelta: {x: 0.5327, y: -0.5388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696558571
 MonoBehaviour:
@@ -4990,11 +4990,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 15.5
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 10
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -5026,7 +5026,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.5237732, z: 0, w: -1.3722229}
+  m_margin: {x: 0, y: 0.5237732, z: 0, w: 0.099121094}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
